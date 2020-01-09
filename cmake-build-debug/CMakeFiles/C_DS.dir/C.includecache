@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/param/Desktop/C_DS/map_tree.c
+map_tree.h
+/home/param/Desktop/C_DS/map_tree.h
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+stdbool.h
+-
+
+/home/param/Desktop/C_DS/map_tree.h
+stddef.h
+-
+stdbool.h
+-
+

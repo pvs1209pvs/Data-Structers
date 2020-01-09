@@ -1,0 +1,3 @@
+/home/param/Desktop/C_DS/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/param/Desktop/C_DS/cmake-build-debug/CMakeFiles/C_DS.dir
+/home/param/Desktop/C_DS/cmake-build-debug/CMakeFiles/edit_cache.dir
