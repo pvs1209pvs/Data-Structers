@@ -5,40 +5,48 @@
 #include <stdbool.h>
 
 
-int compare_to(void *x, void *y) {
+int compare_to(void * x, void * y) {
     return *(int *) x - *(int *) y;
 }
 
 int main() {
 
-    int key[] = {1, 2, 3, 4, 5, 6, 7};
-    int value[] = {10, 20, 30, 40, 50, 60, 70};
+    int key[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    int value[] = {10, 20, 30, 40, 50, 60, 70, 80, 90, 100};
     size_t size = 0;
 
     struct Node root = *map_tree_init_node(NULL, NULL);
 
-    struct Node *nodes[] = {
+    struct Node * nodes[] = {
             map_tree_init_node(&key[0], &value[0]),
             map_tree_init_node(&key[1], &value[1]),
             map_tree_init_node(&key[2], &value[2]),
             map_tree_init_node(&key[3], &value[3]),
             map_tree_init_node(&key[4], &value[4]),
             map_tree_init_node(&key[5], &value[5]),
-            map_tree_init_node(&key[6], &value[6])};
+            map_tree_init_node(&key[6], &value[6]),
+            map_tree_init_node(&key[7], &value[7]),
+            map_tree_init_node(&key[8], &value[8]),
+            map_tree_init_node(&key[9], &value[9])};
+
 
     map_tree_add(&root, nodes[3], compare_to, &size);
     map_tree_add(&root, nodes[1], compare_to, &size);
+    map_tree_add(&root, nodes[9], compare_to, &size);
     map_tree_add(&root, nodes[5], compare_to, &size);
     map_tree_add(&root, nodes[0], compare_to, &size);
+    map_tree_add(&root, nodes[8], compare_to, &size);
+    map_tree_add(&root, nodes[7], compare_to, &size);
     map_tree_add(&root, nodes[2], compare_to, &size);
     map_tree_add(&root, nodes[4], compare_to, &size);
     map_tree_add(&root, nodes[6], compare_to, &size);
 
+
 }
 
-struct Node *map_tree_init_node(void *k, void *v) {
+struct Node * map_tree_init_node(void * k, void * v) {
 
-    struct Node *result = malloc(sizeof(struct Node));
+    struct Node * result = malloc(sizeof(struct Node));
     result->key = k;
     result->value = v;
     result->left = NULL;
@@ -47,7 +55,7 @@ struct Node *map_tree_init_node(void *k, void *v) {
 
 } // init_node
 
-void map_tree_add(struct Node *tree, struct Node *ele, int(compare_to(void *x, void *y)), size_t *size) {
+void map_tree_add(struct Node * tree, struct Node * ele, int(compare_to(void * x, void * y)), size_t * size) {
 
     if (*size == 0) { // tree is empty
         *tree = *ele;
@@ -76,21 +84,21 @@ void map_tree_add(struct Node *tree, struct Node *ele, int(compare_to(void *x, v
 
 } // add
 
-struct Node *map_tree_min(struct Node *tree) {
+struct Node * map_tree_min(struct Node * tree) {
 
     if (tree->left != NULL) map_tree_min(tree->left);
     else return tree;
 
 } // min
 
-struct Node *map_tree_max(struct Node *tree) {
+struct Node * map_tree_max(struct Node * tree) {
 
     if (tree->right != NULL) map_tree_max(tree->right);
     else return tree;
 
 } // max
 
-struct Node *map_tree_del(struct Node *tree, struct Node *ele, int(compareTo)(void *x, void *y), size_t *size) {
+struct Node * map_tree_del(struct Node * tree, struct Node * ele, int(compareTo)(void * x, void * y), size_t * size) {
 
     if (compareTo(ele->key, tree->key) == 0) {
 
@@ -104,11 +112,12 @@ struct Node *map_tree_del(struct Node *tree, struct Node *ele, int(compareTo)(vo
             (*size)--;
             return tree->right;
         } else if (tree->left != NULL && tree->right != NULL) { // two children
-            struct Node *replacer = map_tree_min(tree->right);
+            struct Node * replacer = map_tree_min(tree->right);
             tree->key = replacer->key;
             tree->value = replacer->value;
             tree->left = NULL;
             tree->right = map_tree_del(tree->right, replacer, compareTo, size);
+            (*size)--;
             return tree;
         }
 
@@ -123,7 +132,7 @@ struct Node *map_tree_del(struct Node *tree, struct Node *ele, int(compareTo)(vo
 } // delete
 
 
-struct Node *map_tree_contains(struct Node *tree, struct Node ele, int(compareTo(void *x, void *y))) {
+struct Node * map_tree_contains(struct Node * tree, struct Node ele, int(compareTo(void * x, void * y))) {
 
     if (compareTo(ele.key, tree->key) < 0 && tree->left != NULL) {
         map_tree_contains(tree->left, ele, compareTo);
@@ -135,7 +144,7 @@ struct Node *map_tree_contains(struct Node *tree, struct Node ele, int(compareTo
 
 } // contains
 
-size_t map_tree_height(struct Node *tree) {
+size_t map_tree_height(struct Node * tree) {
 
     size_t leftHght, rightHght;
     leftHght = rightHght = 0;
@@ -147,7 +156,41 @@ size_t map_tree_height(struct Node *tree) {
 
 } // height
 
-bool is_equal(struct Node *a, struct Node *b, int(compareTo)(void *x, void *y)) {
+
+struct Node * map_tree_update_node(struct Node * tree, struct Node * trgt_node, void * new_value, int(compare_to)(void * x, void * y)){
+
+
+    //printf("check:  %d %d \n", *(int*)tree->value, *(int*)trgt_node->value);
+
+    if (compare_to(tree->value, trgt_node->value)==0){
+        tree->value = new_value;
+    }
+
+    if (tree->left != NULL)
+        map_tree_update_node(tree->left, trgt_node, new_value, compare_to);
+
+
+    if (tree->right != NULL)
+        map_tree_update_node(tree->right, trgt_node, new_value, compare_to);
+
+
+}
+
+void map_tree_inorder_traversal(struct Node * tree) {
+
+    if (tree != NULL)
+        printf("%d %d\n", *(int *) tree->key, *(int*)tree->value);
+
+    if (tree->left != NULL)
+        map_tree_inorder_traversal(tree->left);
+
+
+    if (tree->right != NULL)
+        map_tree_inorder_traversal(tree->right);
+
+}
+
+bool is_equal(struct Node * a, struct Node * b, int(compareTo)(void * x, void * y)) {
 
     if (a->left == NULL ^ b->left == NULL || a->right == NULL ^ b->right == NULL) return false;
 
