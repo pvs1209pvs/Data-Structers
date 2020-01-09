@@ -104,13 +104,11 @@ struct Node *map_tree_del(struct Node *tree, struct Node *ele, int(compareTo)(vo
             (*size)--;
             return tree->right;
         } else if (tree->left != NULL && tree->right != NULL) { // two children
-
             struct Node *replacer = map_tree_min(tree->right);
             tree->key = replacer->key;
             tree->value = replacer->value;
             tree->left = NULL;
             tree->right = map_tree_del(tree->right, replacer, compareTo, size);
-
             return tree;
         }
 
