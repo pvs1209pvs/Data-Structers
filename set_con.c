@@ -2,7 +2,7 @@
 #include <malloc.h>
 #include <math.h>
 #include <stdlib.h>
-#include "set.h"
+#include "set_con.h"
 
 void set_new(set *arraySet, size_t cpcty, size_t typSze) {
     arraySet->head = calloc(cpcty, typSze * 2);

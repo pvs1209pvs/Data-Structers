@@ -1,7 +1,7 @@
 #include <malloc.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include "stack.h"
+#include "stack_con.h"
 
 void stack_new(stack *arraystack, size_t capacity, size_t typeSize) {
     arraystack->head = (void **) calloc(capacity, typeSize * 2);

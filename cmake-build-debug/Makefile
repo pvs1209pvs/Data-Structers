@@ -123,33 +123,6 @@ C_DS/fast:
 	$(MAKE) -f CMakeFiles/C_DS.dir/build.make CMakeFiles/C_DS.dir/build
 .PHONY : C_DS/fast
 
-graph_array.o: graph_array.c.o
-
-.PHONY : graph_array.o
-
-# target to build an object file
-graph_array.c.o:
-	$(MAKE) -f CMakeFiles/C_DS.dir/build.make CMakeFiles/C_DS.dir/graph_array.c.o
-.PHONY : graph_array.c.o
-
-graph_array.i: graph_array.c.i
-
-.PHONY : graph_array.i
-
-# target to preprocess a source file
-graph_array.c.i:
-	$(MAKE) -f CMakeFiles/C_DS.dir/build.make CMakeFiles/C_DS.dir/graph_array.c.i
-.PHONY : graph_array.c.i
-
-graph_array.s: graph_array.c.s
-
-.PHONY : graph_array.s
-
-# target to generate assembly for a file
-graph_array.c.s:
-	$(MAKE) -f CMakeFiles/C_DS.dir/build.make CMakeFiles/C_DS.dir/graph_array.c.s
-.PHONY : graph_array.c.s
-
 list_con.o: list_con.c.o
 
 .PHONY : list_con.o
@@ -203,33 +176,6 @@ list_link.s: list_link.c.s
 list_link.c.s:
 	$(MAKE) -f CMakeFiles/C_DS.dir/build.make CMakeFiles/C_DS.dir/list_link.c.s
 .PHONY : list_link.c.s
-
-main.o: main.c.o
-
-.PHONY : main.o
-
-# target to build an object file
-main.c.o:
-	$(MAKE) -f CMakeFiles/C_DS.dir/build.make CMakeFiles/C_DS.dir/main.c.o
-.PHONY : main.c.o
-
-main.i: main.c.i
-
-.PHONY : main.i
-
-# target to preprocess a source file
-main.c.i:
-	$(MAKE) -f CMakeFiles/C_DS.dir/build.make CMakeFiles/C_DS.dir/main.c.i
-.PHONY : main.c.i
-
-main.s: main.c.s
-
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.c.s:
-	$(MAKE) -f CMakeFiles/C_DS.dir/build.make CMakeFiles/C_DS.dir/main.c.s
-.PHONY : main.c.s
 
 map_tree.o: map_tree.c.o
 
@@ -348,18 +294,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... C_DS"
 	@echo "... edit_cache"
-	@echo "... graph_array.o"
-	@echo "... graph_array.i"
-	@echo "... graph_array.s"
 	@echo "... list_con.o"
 	@echo "... list_con.i"
 	@echo "... list_con.s"
 	@echo "... list_link.o"
 	@echo "... list_link.i"
 	@echo "... list_link.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
 	@echo "... map_tree.o"
 	@echo "... map_tree.i"
 	@echo "... map_tree.s"
