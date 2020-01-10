@@ -9,40 +9,41 @@ int compare_to(void * x, void * y) {
     return *(int *) x - *(int *) y;
 }
 
-int main() {
-
-    int key[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-    int value[] = {10, 20, 30, 40, 50, 60, 70, 80, 90, 100};
-    size_t size = 0;
-
-    struct Node root = *map_tree_init_node(NULL, NULL);
-
-    struct Node * nodes[] = {
-            map_tree_init_node(&key[0], &value[0]),
-            map_tree_init_node(&key[1], &value[1]),
-            map_tree_init_node(&key[2], &value[2]),
-            map_tree_init_node(&key[3], &value[3]),
-            map_tree_init_node(&key[4], &value[4]),
-            map_tree_init_node(&key[5], &value[5]),
-            map_tree_init_node(&key[6], &value[6]),
-            map_tree_init_node(&key[7], &value[7]),
-            map_tree_init_node(&key[8], &value[8]),
-            map_tree_init_node(&key[9], &value[9])};
-
-
-    map_tree_add(&root, nodes[3], compare_to, &size);
-    map_tree_add(&root, nodes[1], compare_to, &size);
-    map_tree_add(&root, nodes[9], compare_to, &size);
-    map_tree_add(&root, nodes[5], compare_to, &size);
-    map_tree_add(&root, nodes[0], compare_to, &size);
-    map_tree_add(&root, nodes[8], compare_to, &size);
-    map_tree_add(&root, nodes[7], compare_to, &size);
-    map_tree_add(&root, nodes[2], compare_to, &size);
-    map_tree_add(&root, nodes[4], compare_to, &size);
-    map_tree_add(&root, nodes[6], compare_to, &size);
-
-
-}
+//int main() {
+//
+//    int key[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+//    int value[] = {10, 20, 30, 40, 50, 60, 70, 80, 90, 100};
+//    size_t size = 0;
+//
+//    struct Node root = *map_tree_init_node(NULL, NULL);
+//
+//    struct Node * nodes[] = {
+//            map_tree_init_node(&key[0], &value[0]),
+//            map_tree_init_node(&key[1], &value[1]),
+//            map_tree_init_node(&key[2], &value[2]),
+//            map_tree_init_node(&key[3], &value[3]),
+//            map_tree_init_node(&key[4], &value[4]),
+//            map_tree_init_node(&key[5], &value[5]),
+//            map_tree_init_node(&key[6], &value[6]),
+//            map_tree_init_node(&key[7], &value[7]),
+//            map_tree_init_node(&key[8], &value[8]),
+//            map_tree_init_node(&key[9], &value[9])
+//    };
+//
+//
+//    map_tree_add(&root, nodes[3], compare_to, &size);
+//    map_tree_add(&root, nodes[1], compare_to, &size);
+//    map_tree_add(&root, nodes[9], compare_to, &size);
+//    map_tree_add(&root, nodes[5], compare_to, &size);
+//    map_tree_add(&root, nodes[0], compare_to, &size);
+//    map_tree_add(&root, nodes[8], compare_to, &size);
+//    map_tree_add(&root, nodes[7], compare_to, &size);
+//    map_tree_add(&root, nodes[2], compare_to, &size);
+//    map_tree_add(&root, nodes[4], compare_to, &size);
+//    map_tree_add(&root, nodes[6], compare_to, &size);
+//
+//
+//}
 
 struct Node * map_tree_init_node(void * k, void * v) {
 

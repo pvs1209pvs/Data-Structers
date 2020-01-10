@@ -1,27 +1,28 @@
 #ifndef DATA_STRUCTERS_STACK_H
 #define DATA_STRUCTERS_STACK_H
 
-#include <fcntl.h>
-
-typedef struct {
+struct Stack {
     size_t cpcty;
     size_t size;
-    size_t typeSize;
-    void **head;
-} stack;
+    void ** head;
+};
 
-void stack_new(stack *, size_t, size_t);
+void stack_init(struct Stack * stack, size_t capacity);
 
-void stack_push(stack *, void *);
+void stack_push(struct Stack * stack, void * ele);
 
-void *stack_pop(stack *);
+void * stack_pop(struct Stack * stack);
 
-size_t stack_getSize(stack *);
+size_t stack_size(struct Stack * stack);
 
-_Bool stack_isEmpty(stack *);
+_Bool stack_is_empty(struct Stack * stack);
 
-void *stack_top(stack *);
+void * stack_top(struct Stack * stack);
 
-void grow(stack *);
+void grow(struct Stack * stack);
+
+void stack_free(struct Stack * stack);
+
+void stack_print_info(struct Stack stack);
 
 #endif //DATA_STRUCTERS_STACK_H

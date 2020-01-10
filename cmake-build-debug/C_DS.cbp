@@ -90,6 +90,9 @@
 		<Unit filename="/home/param/Desktop/Data-Structers-C/list_link.h">
 			<Option target="C_DS"/>
 		</Unit>
+		<Unit filename="/home/param/Desktop/Data-Structers-C/main.c">
+			<Option target="C_DS"/>
+		</Unit>
 		<Unit filename="/home/param/Desktop/Data-Structers-C/map_tree.c">
 			<Option target="C_DS"/>
 		</Unit>

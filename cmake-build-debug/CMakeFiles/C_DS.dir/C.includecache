@@ -6,21 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/home/param/Desktop/Data-Structers-C/map_tree.c
-map_tree.h
-/home/param/Desktop/Data-Structers-C/map_tree.h
-stdio.h
--
+/home/param/Desktop/Data-Structers-C/main.c
 stdlib.h
 -
-string.h
+stdio.h
 -
-stdbool.h
--
+stack_con.h
+/home/param/Desktop/Data-Structers-C/stack_con.h
 
-/home/param/Desktop/Data-Structers-C/map_tree.h
-stddef.h
--
-stdbool.h
--
+/home/param/Desktop/Data-Structers-C/stack_con.h
 

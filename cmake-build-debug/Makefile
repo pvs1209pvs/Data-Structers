@@ -177,6 +177,33 @@ list_link.c.s:
 	$(MAKE) -f CMakeFiles/C_DS.dir/build.make CMakeFiles/C_DS.dir/list_link.c.s
 .PHONY : list_link.c.s
 
+main.o: main.c.o
+
+.PHONY : main.o
+
+# target to build an object file
+main.c.o:
+	$(MAKE) -f CMakeFiles/C_DS.dir/build.make CMakeFiles/C_DS.dir/main.c.o
+.PHONY : main.c.o
+
+main.i: main.c.i
+
+.PHONY : main.i
+
+# target to preprocess a source file
+main.c.i:
+	$(MAKE) -f CMakeFiles/C_DS.dir/build.make CMakeFiles/C_DS.dir/main.c.i
+.PHONY : main.c.i
+
+main.s: main.c.s
+
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.c.s:
+	$(MAKE) -f CMakeFiles/C_DS.dir/build.make CMakeFiles/C_DS.dir/main.c.s
+.PHONY : main.c.s
+
 map_tree.o: map_tree.c.o
 
 .PHONY : map_tree.o
@@ -300,6 +327,9 @@ help:
 	@echo "... list_link.o"
 	@echo "... list_link.i"
 	@echo "... list_link.s"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 	@echo "... map_tree.o"
 	@echo "... map_tree.i"
 	@echo "... map_tree.s"
