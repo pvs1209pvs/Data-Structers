@@ -11,8 +11,22 @@ stdlib.h
 -
 stdio.h
 -
-stack_con.h
-/home/param/Desktop/Data-Structers-C/stack_con.h
+set_con.h
+/home/param/Desktop/Data-Structers-C/set_con.h
 
-/home/param/Desktop/Data-Structers-C/stack_con.h
+/home/param/Desktop/Data-Structers-C/set_con.c
+stdio.h
+-
+malloc.h
+-
+math.h
+-
+stdlib.h
+-
+set_con.h
+/home/param/Desktop/Data-Structers-C/set_con.h
+
+/home/param/Desktop/Data-Structers-C/set_con.h
+fcntl.h
+-
 

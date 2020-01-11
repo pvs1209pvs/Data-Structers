@@ -11,7 +11,7 @@ void prio_queue_new(struct prio_queue * my_queue, size_t typ_size, size_t cpcty)
 
 void prio_queue_add(struct prio_queue * my_queue, struct node * ele) {
 
-  if(my_queue->size == my_queue->cpcty) grow(my_queue);
+  if(my_queue->size == my_queue->cpcty) prio_queue_grow(my_queue);
 
   if(my_queue->size == 0) {
     my_queue->queue[my_queue->size] = *ele;

@@ -1,37 +1,52 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include "stack_con.h"
+#include "set_con.h"
 
-
+int compare(void * x, void * y) {
+    return *(char *) x - *(char *) y;
+}
 
 int main() {
 
 
-    int number = 10;
-    void * pVoid = &number;
+    char * data[26];
+
+    for (int i = 0; i < 26; ++i) {
+        char * c = malloc(sizeof(char));
+        *c = (char) (i + 97);
+        data[i] = c;
+    }
 
 
-//    int nums[10];
-//    for (int i = 0; i < 10; ++i) {
-//        nums[i] = i*10;
+    struct Set mySet;
+    set_con_init(&mySet, 5);
+
+    for (int k = 0; k < 10; ++k) {
+        set_con_add(&mySet, data[k], compare);
+    }
+
+    set_con_dlt_indx(&mySet, 2);
+
+    printf("Size %zu\n", mySet.size);
+    for (int j = 0; j < mySet.size; ++j) {
+        if (mySet.head[j] != NULL)
+            printf("%c\n", *(char *) mySet.head[j]);
+    }
+
+
+//    printf("Addresses\n");
+//    for (int l = 0; l < 10; ++l) {
+//        if (mySet.head[l] != NULL)
+//            free(mySet.head[l]);
+//        else printf("huh");
+//        printf("%p\n", mySet.head[l]);
 //    }
-//
-//    struct Stack myStack;
-//    stack_init(&myStack, 4);
-//    stack_print_info(myStack);
-//
-//    for (int k = 0; k < 10; ++k) {
-//        stack_push(&myStack, &nums[k]);
-//    }
-//
-//
-//    printf("%d", *(int*)stack_top(&myStack));
-////    for (int j = 0; j < 10; ++j) {
-////        printf("%d\n", *(int*)stack_pop(&myStack));
-////        //printf("%d, ",*(int*)stack_pop(&myStack));
-////    }
-//
-//
-//
-//    free(myStack.head);
+
+    set_con_free(&mySet);
+
+
+    for (int j = 0; j < 26; ++j) {
+        free(data[j]);
+    }
+
 }

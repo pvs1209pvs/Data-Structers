@@ -7,22 +7,22 @@ struct Stack {
     void ** head;
 };
 
-void stack_init(struct Stack * stack, size_t capacity);
+void stack_con_init(struct Stack * stack, size_t capacity);
 
-void stack_push(struct Stack * stack, void * ele);
+void stack_con_push(struct Stack * stack, void * ele);
 
-void * stack_pop(struct Stack * stack);
+void * stack_con_pop(struct Stack * stack);
 
-size_t stack_size(struct Stack * stack);
+size_t stack_con_size(struct Stack * stack);
 
-_Bool stack_is_empty(struct Stack * stack);
+_Bool stack_con_is_empty(struct Stack * stack);
 
-void * stack_top(struct Stack * stack);
+void * stack_con_top(struct Stack * stack);
 
-void grow(struct Stack * stack);
+void stack_con_grow(struct Stack * stack);
 
-void stack_free(struct Stack * stack);
+void stack_stack_free(struct Stack * stack);
 
-void stack_print_info(struct Stack stack);
+void stack_con_print_info(struct Stack stack);
 
 #endif //DATA_STRUCTERS_STACK_H

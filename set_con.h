@@ -3,31 +3,32 @@
 
 #include <fcntl.h>
 
-typedef struct {
+struct Set{
     size_t size;    // size of the set
     size_t cpcty;   // current number of elements in the set
-    size_t typSze;  // size of the elements to be stored in the set
     void **head;    // pointer style dynamic head
 
-} set;
+};
 
-void set_new(set *, size_t, size_t);
+void set_con_init(struct Set * set, size_t cpcty);
 
-void set_add(set *, void *ele, int(*compareTo)(void *, void *));
+void set_con_add(struct Set * set, void *ele, int(*compare_to)(void * x, void * y));
 
-void set_dltVle(set *, void *, int(*fctPtr)(void *, void *));
+void set_con_dlt_vle(struct Set * set, void * ele, int(*compare_to)(void * x, void * y));
 
-void set_dltIndx(set *, int index);
+void set_con_dlt_indx(struct Set * set, int index);
 
-void set_union(set *, set *, int(*compareTo)(void *, void *));
+struct Set * set_con_union(struct Set * set_one, struct Set * set_two, int(*compare_to)(void * x, void * y));
 
-_Bool set_cntns(set *, void *, int(*compareTo)(void *, void *));
+int set_con_cntns(struct Set * set, void * ele, int(*compare_to)(void * x, void * y));
 
-size_t set_getSize(set *);
+size_t set_con_size(struct Set * set);
 
-_Bool set_isEmpty(set *);
+_Bool set_con_is_empty(struct Set * set);
 
-void set_grow_by(set *, size_t);
+void set_con_grow(struct Set * set);
+
+void set_con_free(struct Set * set);
 
 #endif //DATA_STRUCTURES_SET_H
 

@@ -1,33 +1,32 @@
 #ifndef DATA_STRUCTERS_con_list_H
 #define DATA_STRUCTERS_con_list_H
 
-typedef struct {
+struct List {
     size_t size;
-    size_t typSze;
     size_t cpcty;
-    void* *head;
-} con_list;
+    void ** head;
+};
 
-void con_list_init(con_list *, size_t, size_t);
+void con_list_init(struct List * list, size_t cpcty);
 
-void con_list_add(con_list *, void *);
+void con_list_add(struct List * list, void * ele);
 
-void con_list_dltIndx(con_list *, size_t);
+void con_list_dltIndx(struct List * list, size_t i);
 
-void *con_list_get(con_list *, size_t);
+void * con_list_get(struct List * list, size_t i);
 
-size_t con_list_size(con_list *);
+size_t con_list_size(struct List * list);
 
-void con_list_clr(con_list *);
+void con_list_clr(struct List * list);
 
-void con_list_setAt(con_list *, size_t, void *);
+void con_list_setAt(struct List * list , size_t i, void * ele);
 
-_Bool con_list_cntns(con_list *, void *ele, int(compareTo)(void *, void *));
+_Bool con_list_cntns(struct List * list, void * ele, int(compareTo)(void * x, void * y));
 
-_Bool con_list_isEmpty(con_list *);
+_Bool con_list_is_empty(struct List * list);
 
-void con_list_grow(con_list *);
+void con_list_grow(struct List * list);
 
-void con_list_free(con_list *);
+void con_list_free(struct List * list);
 
 #endif //DATA_STRUCTERS_con_list_H

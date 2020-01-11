@@ -8,7 +8,7 @@ CMakeFiles/C_DS.dir/list_link.c.o: ../list_link.c
 CMakeFiles/C_DS.dir/list_link.c.o: ../list_link.h
 
 CMakeFiles/C_DS.dir/main.c.o: ../main.c
-CMakeFiles/C_DS.dir/main.c.o: ../stack_con.h
+CMakeFiles/C_DS.dir/main.c.o: ../set_con.h
 
 CMakeFiles/C_DS.dir/map_tree.c.o: ../map_tree.c
 CMakeFiles/C_DS.dir/map_tree.c.o: ../map_tree.h
