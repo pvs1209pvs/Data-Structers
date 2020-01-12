@@ -10,7 +10,7 @@ void set_con_init(struct Set * arraySet, size_t cpcty) {
     arraySet->size = 0;
 }
 
-void set_con_add(struct Set * arraySet, void * ele, int(* compareTo)(void *, void *)) {
+void set_con_add(struct Set * arraySet, void * ele, int(* compareTo)(const void * const x, const void * const y)) {
 
     if (arraySet->size == arraySet->cpcty) set_con_grow(arraySet);
 
@@ -27,25 +27,26 @@ void set_con_add(struct Set * arraySet, void * ele, int(* compareTo)(void *, voi
 
 }
 
-void set_con_dlt_vle(struct Set * arraySet, void * ele, int(* compareTo)(void *, void *)) {
+void set_con_dlt_vle(struct Set * arraySet, void * ele, int(* compareTo)(const void * const x, const void * const y)) {
 
     int i = 0;
 
     for (i = 0; i < arraySet->size; ++i) {
         if (compareTo(arraySet->head[i], ele) == 0) {
             arraySet->head[i] = NULL;
-            arraySet->size--;
             break;
         }
     }
 
     for (int j = i; i < arraySet->size - 1; ++i)
         arraySet->head[i] = arraySet->head[i + 1];
+
+    arraySet->size--;
 }
 
 void set_con_dlt_indx(struct Set * arraySet, int index) {
 
-    free(arraySet->head[index]);
+    //free(arraySet->head[index]);
 
     for (int i = index; i < set_con_size(arraySet) - 1; ++i) {
         arraySet->head[i] = arraySet->head[i + 1];
@@ -57,7 +58,7 @@ void set_con_dlt_indx(struct Set * arraySet, int index) {
 
 }
 
-struct Set * set_con_union(struct Set * set_one, struct Set * set_two, int(* compare_to)(void *, void *)) {
+struct Set * set_con_union(struct Set * set_one, struct Set * set_two, int(* compare_to)(const void * const x, const void * const y)) {
 
     struct Set * union_set = malloc(sizeof(struct Set));
     set_con_init(union_set, set_one->size > set_two->size ? set_one->size : set_two->size);
@@ -75,7 +76,7 @@ struct Set * set_con_union(struct Set * set_one, struct Set * set_two, int(* com
 
 }
 
-int set_con_cntns(struct Set * arraySet, void * ele, int(* compareTo)(void *, void *)) {
+int set_con_cntns(struct Set * arraySet, void * ele, int(* compareTo)(const void * const x, const void * const y)) {
 
     _Bool bool = 0;
 
@@ -106,14 +107,5 @@ void set_con_grow(struct Set * arraySet) {
 }
 
 void set_con_free(struct Set * set) {
-
-//    printf("%zu %zu \n", set->size, set->cpcty);
-//
-//    for (int i = 0; i < set->size; ++i) {
-//        printf("%c, ", *(char*)set->head[i]);
-//        free(set->head[i]);
-//    }
-//
-//    printf("\n");
     free(set->head);
 }
