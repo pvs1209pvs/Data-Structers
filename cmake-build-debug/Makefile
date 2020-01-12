@@ -177,33 +177,6 @@ list_link.c.s:
 	$(MAKE) -f CMakeFiles/C_DS.dir/build.make CMakeFiles/C_DS.dir/list_link.c.s
 .PHONY : list_link.c.s
 
-main.o: main.c.o
-
-.PHONY : main.o
-
-# target to build an object file
-main.c.o:
-	$(MAKE) -f CMakeFiles/C_DS.dir/build.make CMakeFiles/C_DS.dir/main.c.o
-.PHONY : main.c.o
-
-main.i: main.c.i
-
-.PHONY : main.i
-
-# target to preprocess a source file
-main.c.i:
-	$(MAKE) -f CMakeFiles/C_DS.dir/build.make CMakeFiles/C_DS.dir/main.c.i
-.PHONY : main.c.i
-
-main.s: main.c.s
-
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.c.s:
-	$(MAKE) -f CMakeFiles/C_DS.dir/build.make CMakeFiles/C_DS.dir/main.c.s
-.PHONY : main.c.s
-
 map_tree.o: map_tree.c.o
 
 .PHONY : map_tree.o
@@ -312,6 +285,33 @@ stack_con.c.s:
 	$(MAKE) -f CMakeFiles/C_DS.dir/build.make CMakeFiles/C_DS.dir/stack_con.c.s
 .PHONY : stack_con.c.s
 
+test.o: test.c.o
+
+.PHONY : test.o
+
+# target to build an object file
+test.c.o:
+	$(MAKE) -f CMakeFiles/C_DS.dir/build.make CMakeFiles/C_DS.dir/test.c.o
+.PHONY : test.c.o
+
+test.i: test.c.i
+
+.PHONY : test.i
+
+# target to preprocess a source file
+test.c.i:
+	$(MAKE) -f CMakeFiles/C_DS.dir/build.make CMakeFiles/C_DS.dir/test.c.i
+.PHONY : test.c.i
+
+test.s: test.c.s
+
+.PHONY : test.s
+
+# target to generate assembly for a file
+test.c.s:
+	$(MAKE) -f CMakeFiles/C_DS.dir/build.make CMakeFiles/C_DS.dir/test.c.s
+.PHONY : test.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -327,9 +327,6 @@ help:
 	@echo "... list_link.o"
 	@echo "... list_link.i"
 	@echo "... list_link.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
 	@echo "... map_tree.o"
 	@echo "... map_tree.i"
 	@echo "... map_tree.s"
@@ -342,6 +339,9 @@ help:
 	@echo "... stack_con.o"
 	@echo "... stack_con.i"
 	@echo "... stack_con.s"
+	@echo "... test.o"
+	@echo "... test.i"
+	@echo "... test.s"
 .PHONY : help
 
 

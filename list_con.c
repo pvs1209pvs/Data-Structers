@@ -81,7 +81,7 @@ ele: element that to be checked for.
 compareTo: function poninter that dictates how the elements should be compared.
 return value: 1 is the element is present in the list, else 0.
 */
-_Bool con_list_cntns(struct List *list, void *ele, int(compareTo)(void *, void *)) {
+_Bool con_list_cntns(struct List *list, void *ele, int(compareTo)(const void * const x, const void * const y)) {
   for (int i = 0; i < list->size; ++i) {
     if (compareTo(list->head[i], ele) == 0) return 1;
   }

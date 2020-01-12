@@ -6,7 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/param/Desktop/Data-Structers-C/main.c
+/home/param/Desktop/Data-Structers-C/set_con.h
+fcntl.h
+-
+
+/home/param/Desktop/Data-Structers-C/test.c
 stdlib.h
 -
 stdio.h
@@ -15,8 +19,4 @@ string.h
 -
 set_con.h
 /home/param/Desktop/Data-Structers-C/set_con.h
-
-/home/param/Desktop/Data-Structers-C/set_con.h
-fcntl.h
--
 

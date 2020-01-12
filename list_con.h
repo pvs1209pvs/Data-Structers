@@ -21,7 +21,7 @@ void con_list_clr(struct List * list);
 
 void con_list_setAt(struct List * list , size_t i, void * ele);
 
-_Bool con_list_cntns(struct List * list, void * ele, int(compareTo)(void * x, void * y));
+_Bool con_list_cntns(struct List * list, void * ele, int(compareTo)(const void * const x, const void * const y));
 
 _Bool con_list_is_empty(struct List * list);
 

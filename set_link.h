@@ -20,6 +20,6 @@ set_link set_link_union(set_link * a, set_link * b);
 
 set_link set_link_intrsctn(set_link * a, set_link * b);
 
-_Bool set_link_cntns(set_link * set, void * ele, int(compareTo)(void * x, void * y));
+_Bool set_link_cntns(set_link * set, void * ele, int(compareTo)(const void * const x, const void * const y));
 
 void set_link_free(set_link * set);

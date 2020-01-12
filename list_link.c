@@ -113,7 +113,7 @@ void list_link_dlt_at(list_link * list, size_t index) {
 }
 
 
-void list_link_dlt_ele(list_link * list, void * ele, int(compareTo)(void * x, void * y)) {
+void list_link_dlt_ele(list_link * list, void * ele, int(compareTo)(const void * const x, const void *const  y)) {
 
   struct node * p = list->head;
   struct node * q = list->head;
@@ -171,7 +171,7 @@ void list_link_set_at(list_link * list, void * new_value, size_t index){
 }
 
 
-int list_link_index_of(list_link * list, void * ele, int(compareTo)(void * x, void * y)) {
+int list_link_index_of(list_link * list, void * ele, int(compareTo)(const void * const x, const void * const y)) {
 
   struct node * p = list->head;
   int ele_index = -1;
@@ -189,7 +189,7 @@ int list_link_index_of(list_link * list, void * ele, int(compareTo)(void * x, vo
 }
 
 
-_Bool list_link_cnts(list_link * list, void * ele, int(compareTo)(void * x, void * y)) {
+_Bool list_link_cnts(list_link * list, void * ele, int(compareTo)(const void * const x, const void * const y)) {
 
   struct node * p = list->head;
 
