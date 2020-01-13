@@ -1,6 +1,6 @@
   #include <stdio.h>
 #include <stdlib.h>
-#include "list_link.h"
+#include "link_list.h"
 
 void list_link_new(list_link * list){
   list->size = 0;
@@ -8,7 +8,7 @@ void list_link_new(list_link * list){
 }
 
 
-void list_link_prepend_node(list_link * list, struct node * ele) {
+void link_list_prepend_node(list_link * list, struct node * ele) {
 
   if(list->size==0) {
     list->head = ele;
@@ -22,34 +22,34 @@ void list_link_prepend_node(list_link * list, struct node * ele) {
 }
 
 
-void list_link_prepend_ele(list_link * list, void * ele){
+void link_list_prepend_ele(list_link * list, void * ele){
 
   struct node* eleNode = (struct node*)malloc(sizeof(struct node));
   eleNode->value = ele;
   eleNode->next = NULL;
 
-  list_link_prepend_node(list, eleNode);
+  link_list_prepend_node(list, eleNode);
   list->size++;
 
 }
 
 
-void list_link_append_node(list_link * list, struct node * ele) {
-  list_link_add_node_at(list, ele, list->size);
+void link_list_append_node(list_link * list, struct node * ele) {
+  link_list_add_node_at(list, ele, list->size);
 }
 
 
-void list_link_append_ele(list_link * list, void * ele) {
+void link_list_append_ele(list_link * list, void * ele) {
   struct node* eleNode = (struct node*)malloc(sizeof(struct node));
   eleNode->value = ele;
   eleNode->next = NULL;
 
-  list_link_append_node(list, eleNode);
+  link_list_append_node(list, eleNode);
   list->size++;
 }
 
 
-void list_link_add_node_at(list_link * list, struct node * ele, size_t index){
+void link_list_add_node_at(list_link * list, struct node * ele, size_t index){
 
   if(index == 0) {
     ele->next = list->head;
@@ -73,7 +73,7 @@ void list_link_add_node_at(list_link * list, struct node * ele, size_t index){
 }
 
 
-void list_link_add_ele_at(list_link * list, void * ele, size_t index){
+void link_list_add_ele_at(list_link * list, void * ele, size_t index){
 
   if(index < 0 || index > list->size) {
     exit(1);
@@ -83,15 +83,15 @@ void list_link_add_ele_at(list_link * list, void * ele, size_t index){
   eleNode->value = ele;
   eleNode->next = NULL;
 
-  list_link_add_node_at(list, eleNode, index);
+  link_list_add_node_at(list, eleNode, index);
   list->size++;
 
 }
 
 
-void list_link_dlt_at(list_link * list, size_t index) {
+void link_list_dlt_at(list_link * list, size_t index) {
 
-  list_link_index_check(list, index);
+  link_list_index_check(list, index);
 
   struct node * p = list->head;
   struct node * q = list->head;
@@ -113,12 +113,12 @@ void list_link_dlt_at(list_link * list, size_t index) {
 }
 
 
-void list_link_dlt_ele(list_link * list, void * ele, int(compareTo)(const void * const x, const void *const  y)) {
+void link_list_dlt_ele(list_link * list, void * ele, int(compareTo)(const void * const x, const void *const  y)) {
 
   struct node * p = list->head;
   struct node * q = list->head;
 
-  if(list_link_index_of(list, ele, compareTo)==0) {
+  if(link_list_index_of(list, ele, compareTo)==0) {
     list->head = p->next;
     list->size--;
     free(p);
@@ -143,7 +143,7 @@ void list_link_dlt_ele(list_link * list, void * ele, int(compareTo)(const void *
 }
 
 
-void * list_link_get(list_link * list, size_t index) {
+void * link_list_get(list_link * list, size_t index) {
 
   struct node * p = list->head;
 
@@ -156,9 +156,9 @@ void * list_link_get(list_link * list, size_t index) {
 }
 
 
-void list_link_set_at(list_link * list, void * new_value, size_t index){
+void link_list_set_at(list_link * list, void * new_value, size_t index){
 
-  list_link_index_check(list, index);
+  link_list_index_check(list, index);
 
   struct node * p = list->head;
 
@@ -171,7 +171,7 @@ void list_link_set_at(list_link * list, void * new_value, size_t index){
 }
 
 
-int list_link_index_of(list_link * list, void * ele, int(compareTo)(const void * const x, const void * const y)) {
+int link_list_index_of(list_link * list, void * ele, int(compareTo)(const void * const x, const void * const y)) {
 
   struct node * p = list->head;
   int ele_index = -1;
@@ -189,7 +189,7 @@ int list_link_index_of(list_link * list, void * ele, int(compareTo)(const void *
 }
 
 
-_Bool list_link_cnts(list_link * list, void * ele, int(compareTo)(const void * const x, const void * const y)) {
+_Bool link_list_cnts(list_link * list, void * ele, int(compareTo)(const void * const x, const void * const y)) {
 
   struct node * p = list->head;
 
@@ -206,12 +206,12 @@ _Bool list_link_cnts(list_link * list, void * ele, int(compareTo)(const void * c
 }
 
 
-_Bool list_link_is_empty(list_link * list) {
+_Bool link_list_is_empty(list_link * list) {
   return list->size==0 ? 1 : 0;
 }
 
 
-void list_link_free(list_link * list) {
+void link_list_free(list_link * list) {
 
   struct node * p = list->head;
 
@@ -225,7 +225,7 @@ void list_link_free(list_link * list) {
 }
 
 
-void** list_link_to_array(list_link * list) {
+void** link_list_to_array(list_link * list) {
 
     if(list->size == 0) {
       return NULL;
@@ -245,7 +245,7 @@ void** list_link_to_array(list_link * list) {
 }
 
 
-void list_link_index_check(list_link * list, size_t index) {
+void link_list_index_check(list_link * list, size_t index) {
   if(index < 0 || index >= list->size) {
     exit(1);
   }

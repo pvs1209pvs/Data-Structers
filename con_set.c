@@ -2,7 +2,7 @@
 #include <malloc.h>
 #include <math.h>
 #include <stdlib.h>
-#include "set_con.h"
+#include "con_set.h"
 
 void set_con_init(struct Set * arraySet, size_t cpcty) {
     arraySet->head = malloc(cpcty*sizeof(void *));

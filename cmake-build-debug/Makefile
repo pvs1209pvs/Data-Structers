@@ -123,86 +123,113 @@ C_DS/fast:
 	$(MAKE) -f CMakeFiles/C_DS.dir/build.make CMakeFiles/C_DS.dir/build
 .PHONY : C_DS/fast
 
-list_con.o: list_con.c.o
+con_list.o: con_list.c.o
 
-.PHONY : list_con.o
-
-# target to build an object file
-list_con.c.o:
-	$(MAKE) -f CMakeFiles/C_DS.dir/build.make CMakeFiles/C_DS.dir/list_con.c.o
-.PHONY : list_con.c.o
-
-list_con.i: list_con.c.i
-
-.PHONY : list_con.i
-
-# target to preprocess a source file
-list_con.c.i:
-	$(MAKE) -f CMakeFiles/C_DS.dir/build.make CMakeFiles/C_DS.dir/list_con.c.i
-.PHONY : list_con.c.i
-
-list_con.s: list_con.c.s
-
-.PHONY : list_con.s
-
-# target to generate assembly for a file
-list_con.c.s:
-	$(MAKE) -f CMakeFiles/C_DS.dir/build.make CMakeFiles/C_DS.dir/list_con.c.s
-.PHONY : list_con.c.s
-
-list_link.o: list_link.c.o
-
-.PHONY : list_link.o
+.PHONY : con_list.o
 
 # target to build an object file
-list_link.c.o:
-	$(MAKE) -f CMakeFiles/C_DS.dir/build.make CMakeFiles/C_DS.dir/list_link.c.o
-.PHONY : list_link.c.o
+con_list.c.o:
+	$(MAKE) -f CMakeFiles/C_DS.dir/build.make CMakeFiles/C_DS.dir/con_list.c.o
+.PHONY : con_list.c.o
 
-list_link.i: list_link.c.i
+con_list.i: con_list.c.i
 
-.PHONY : list_link.i
+.PHONY : con_list.i
 
 # target to preprocess a source file
-list_link.c.i:
-	$(MAKE) -f CMakeFiles/C_DS.dir/build.make CMakeFiles/C_DS.dir/list_link.c.i
-.PHONY : list_link.c.i
+con_list.c.i:
+	$(MAKE) -f CMakeFiles/C_DS.dir/build.make CMakeFiles/C_DS.dir/con_list.c.i
+.PHONY : con_list.c.i
 
-list_link.s: list_link.c.s
+con_list.s: con_list.c.s
 
-.PHONY : list_link.s
+.PHONY : con_list.s
 
 # target to generate assembly for a file
-list_link.c.s:
-	$(MAKE) -f CMakeFiles/C_DS.dir/build.make CMakeFiles/C_DS.dir/list_link.c.s
-.PHONY : list_link.c.s
+con_list.c.s:
+	$(MAKE) -f CMakeFiles/C_DS.dir/build.make CMakeFiles/C_DS.dir/con_list.c.s
+.PHONY : con_list.c.s
 
-map_tree.o: map_tree.c.o
+con_set.o: con_set.c.o
 
-.PHONY : map_tree.o
+.PHONY : con_set.o
 
 # target to build an object file
-map_tree.c.o:
-	$(MAKE) -f CMakeFiles/C_DS.dir/build.make CMakeFiles/C_DS.dir/map_tree.c.o
-.PHONY : map_tree.c.o
+con_set.c.o:
+	$(MAKE) -f CMakeFiles/C_DS.dir/build.make CMakeFiles/C_DS.dir/con_set.c.o
+.PHONY : con_set.c.o
 
-map_tree.i: map_tree.c.i
+con_set.i: con_set.c.i
 
-.PHONY : map_tree.i
+.PHONY : con_set.i
 
 # target to preprocess a source file
-map_tree.c.i:
-	$(MAKE) -f CMakeFiles/C_DS.dir/build.make CMakeFiles/C_DS.dir/map_tree.c.i
-.PHONY : map_tree.c.i
+con_set.c.i:
+	$(MAKE) -f CMakeFiles/C_DS.dir/build.make CMakeFiles/C_DS.dir/con_set.c.i
+.PHONY : con_set.c.i
 
-map_tree.s: map_tree.c.s
+con_set.s: con_set.c.s
 
-.PHONY : map_tree.s
+.PHONY : con_set.s
 
 # target to generate assembly for a file
-map_tree.c.s:
-	$(MAKE) -f CMakeFiles/C_DS.dir/build.make CMakeFiles/C_DS.dir/map_tree.c.s
-.PHONY : map_tree.c.s
+con_set.c.s:
+	$(MAKE) -f CMakeFiles/C_DS.dir/build.make CMakeFiles/C_DS.dir/con_set.c.s
+.PHONY : con_set.c.s
+
+con_stack.o: con_stack.c.o
+
+.PHONY : con_stack.o
+
+# target to build an object file
+con_stack.c.o:
+	$(MAKE) -f CMakeFiles/C_DS.dir/build.make CMakeFiles/C_DS.dir/con_stack.c.o
+.PHONY : con_stack.c.o
+
+con_stack.i: con_stack.c.i
+
+.PHONY : con_stack.i
+
+# target to preprocess a source file
+con_stack.c.i:
+	$(MAKE) -f CMakeFiles/C_DS.dir/build.make CMakeFiles/C_DS.dir/con_stack.c.i
+.PHONY : con_stack.c.i
+
+con_stack.s: con_stack.c.s
+
+.PHONY : con_stack.s
+
+# target to generate assembly for a file
+con_stack.c.s:
+	$(MAKE) -f CMakeFiles/C_DS.dir/build.make CMakeFiles/C_DS.dir/con_stack.c.s
+.PHONY : con_stack.c.s
+
+link_list.o: link_list.c.o
+
+.PHONY : link_list.o
+
+# target to build an object file
+link_list.c.o:
+	$(MAKE) -f CMakeFiles/C_DS.dir/build.make CMakeFiles/C_DS.dir/link_list.c.o
+.PHONY : link_list.c.o
+
+link_list.i: link_list.c.i
+
+.PHONY : link_list.i
+
+# target to preprocess a source file
+link_list.c.i:
+	$(MAKE) -f CMakeFiles/C_DS.dir/build.make CMakeFiles/C_DS.dir/link_list.c.i
+.PHONY : link_list.c.i
+
+link_list.s: link_list.c.s
+
+.PHONY : link_list.s
+
+# target to generate assembly for a file
+link_list.c.s:
+	$(MAKE) -f CMakeFiles/C_DS.dir/build.make CMakeFiles/C_DS.dir/link_list.c.s
+.PHONY : link_list.c.s
 
 prio_queue.o: prio_queue.c.o
 
@@ -231,60 +258,6 @@ prio_queue.c.s:
 	$(MAKE) -f CMakeFiles/C_DS.dir/build.make CMakeFiles/C_DS.dir/prio_queue.c.s
 .PHONY : prio_queue.c.s
 
-set_con.o: set_con.c.o
-
-.PHONY : set_con.o
-
-# target to build an object file
-set_con.c.o:
-	$(MAKE) -f CMakeFiles/C_DS.dir/build.make CMakeFiles/C_DS.dir/set_con.c.o
-.PHONY : set_con.c.o
-
-set_con.i: set_con.c.i
-
-.PHONY : set_con.i
-
-# target to preprocess a source file
-set_con.c.i:
-	$(MAKE) -f CMakeFiles/C_DS.dir/build.make CMakeFiles/C_DS.dir/set_con.c.i
-.PHONY : set_con.c.i
-
-set_con.s: set_con.c.s
-
-.PHONY : set_con.s
-
-# target to generate assembly for a file
-set_con.c.s:
-	$(MAKE) -f CMakeFiles/C_DS.dir/build.make CMakeFiles/C_DS.dir/set_con.c.s
-.PHONY : set_con.c.s
-
-stack_con.o: stack_con.c.o
-
-.PHONY : stack_con.o
-
-# target to build an object file
-stack_con.c.o:
-	$(MAKE) -f CMakeFiles/C_DS.dir/build.make CMakeFiles/C_DS.dir/stack_con.c.o
-.PHONY : stack_con.c.o
-
-stack_con.i: stack_con.c.i
-
-.PHONY : stack_con.i
-
-# target to preprocess a source file
-stack_con.c.i:
-	$(MAKE) -f CMakeFiles/C_DS.dir/build.make CMakeFiles/C_DS.dir/stack_con.c.i
-.PHONY : stack_con.c.i
-
-stack_con.s: stack_con.c.s
-
-.PHONY : stack_con.s
-
-# target to generate assembly for a file
-stack_con.c.s:
-	$(MAKE) -f CMakeFiles/C_DS.dir/build.make CMakeFiles/C_DS.dir/stack_con.c.s
-.PHONY : stack_con.c.s
-
 test.o: test.c.o
 
 .PHONY : test.o
@@ -312,6 +285,33 @@ test.c.s:
 	$(MAKE) -f CMakeFiles/C_DS.dir/build.make CMakeFiles/C_DS.dir/test.c.s
 .PHONY : test.c.s
 
+tree_map.o: tree_map.c.o
+
+.PHONY : tree_map.o
+
+# target to build an object file
+tree_map.c.o:
+	$(MAKE) -f CMakeFiles/C_DS.dir/build.make CMakeFiles/C_DS.dir/tree_map.c.o
+.PHONY : tree_map.c.o
+
+tree_map.i: tree_map.c.i
+
+.PHONY : tree_map.i
+
+# target to preprocess a source file
+tree_map.c.i:
+	$(MAKE) -f CMakeFiles/C_DS.dir/build.make CMakeFiles/C_DS.dir/tree_map.c.i
+.PHONY : tree_map.c.i
+
+tree_map.s: tree_map.c.s
+
+.PHONY : tree_map.s
+
+# target to generate assembly for a file
+tree_map.c.s:
+	$(MAKE) -f CMakeFiles/C_DS.dir/build.make CMakeFiles/C_DS.dir/tree_map.c.s
+.PHONY : tree_map.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -321,27 +321,27 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... C_DS"
 	@echo "... edit_cache"
-	@echo "... list_con.o"
-	@echo "... list_con.i"
-	@echo "... list_con.s"
-	@echo "... list_link.o"
-	@echo "... list_link.i"
-	@echo "... list_link.s"
-	@echo "... map_tree.o"
-	@echo "... map_tree.i"
-	@echo "... map_tree.s"
+	@echo "... con_list.o"
+	@echo "... con_list.i"
+	@echo "... con_list.s"
+	@echo "... con_set.o"
+	@echo "... con_set.i"
+	@echo "... con_set.s"
+	@echo "... con_stack.o"
+	@echo "... con_stack.i"
+	@echo "... con_stack.s"
+	@echo "... link_list.o"
+	@echo "... link_list.i"
+	@echo "... link_list.s"
 	@echo "... prio_queue.o"
 	@echo "... prio_queue.i"
 	@echo "... prio_queue.s"
-	@echo "... set_con.o"
-	@echo "... set_con.i"
-	@echo "... set_con.s"
-	@echo "... stack_con.o"
-	@echo "... stack_con.i"
-	@echo "... stack_con.s"
 	@echo "... test.o"
 	@echo "... test.i"
 	@echo "... test.s"
+	@echo "... tree_map.o"
+	@echo "... tree_map.i"
+	@echo "... tree_map.s"
 .PHONY : help
 
 

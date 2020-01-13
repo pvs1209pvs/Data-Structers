@@ -78,22 +78,31 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/param/Desktop/Data-Structers-C/list_con.c">
+		<Unit filename="/home/param/Desktop/Data-Structers-C/con_list.c">
 			<Option target="C_DS"/>
 		</Unit>
-		<Unit filename="/home/param/Desktop/Data-Structers-C/list_con.h">
+		<Unit filename="/home/param/Desktop/Data-Structers-C/con_list.h">
 			<Option target="C_DS"/>
 		</Unit>
-		<Unit filename="/home/param/Desktop/Data-Structers-C/list_link.c">
+		<Unit filename="/home/param/Desktop/Data-Structers-C/con_set.c">
 			<Option target="C_DS"/>
 		</Unit>
-		<Unit filename="/home/param/Desktop/Data-Structers-C/list_link.h">
+		<Unit filename="/home/param/Desktop/Data-Structers-C/con_set.h">
 			<Option target="C_DS"/>
 		</Unit>
-		<Unit filename="/home/param/Desktop/Data-Structers-C/map_tree.c">
+		<Unit filename="/home/param/Desktop/Data-Structers-C/con_stack.c">
 			<Option target="C_DS"/>
 		</Unit>
-		<Unit filename="/home/param/Desktop/Data-Structers-C/map_tree.h">
+		<Unit filename="/home/param/Desktop/Data-Structers-C/con_stack.h">
+			<Option target="C_DS"/>
+		</Unit>
+		<Unit filename="/home/param/Desktop/Data-Structers-C/link_list.c">
+			<Option target="C_DS"/>
+		</Unit>
+		<Unit filename="/home/param/Desktop/Data-Structers-C/link_list.h">
+			<Option target="C_DS"/>
+		</Unit>
+		<Unit filename="/home/param/Desktop/Data-Structers-C/link_set.h">
 			<Option target="C_DS"/>
 		</Unit>
 		<Unit filename="/home/param/Desktop/Data-Structers-C/prio_queue.c">
@@ -102,22 +111,13 @@
 		<Unit filename="/home/param/Desktop/Data-Structers-C/prio_queue.h">
 			<Option target="C_DS"/>
 		</Unit>
-		<Unit filename="/home/param/Desktop/Data-Structers-C/set_con.c">
-			<Option target="C_DS"/>
-		</Unit>
-		<Unit filename="/home/param/Desktop/Data-Structers-C/set_con.h">
-			<Option target="C_DS"/>
-		</Unit>
-		<Unit filename="/home/param/Desktop/Data-Structers-C/set_link.h">
-			<Option target="C_DS"/>
-		</Unit>
-		<Unit filename="/home/param/Desktop/Data-Structers-C/stack_con.c">
-			<Option target="C_DS"/>
-		</Unit>
-		<Unit filename="/home/param/Desktop/Data-Structers-C/stack_con.h">
-			<Option target="C_DS"/>
-		</Unit>
 		<Unit filename="/home/param/Desktop/Data-Structers-C/test.c">
+			<Option target="C_DS"/>
+		</Unit>
+		<Unit filename="/home/param/Desktop/Data-Structers-C/tree_map.c">
+			<Option target="C_DS"/>
+		</Unit>
+		<Unit filename="/home/param/Desktop/Data-Structers-C/tree_map.h">
 			<Option target="C_DS"/>
 		</Unit>
 		<Unit filename="/home/param/Desktop/Data-Structers-C/CMakeLists.txt">
