@@ -16,8 +16,8 @@ CMakeFiles/C_DS.dir/link_list.c.o: ../link_list.h
 CMakeFiles/C_DS.dir/prio_queue.c.o: ../prio_queue.c
 CMakeFiles/C_DS.dir/prio_queue.c.o: ../prio_queue.h
 
-CMakeFiles/C_DS.dir/test.c.o: ../con_set.h
 CMakeFiles/C_DS.dir/test.c.o: ../test.c
+CMakeFiles/C_DS.dir/test.c.o: ../tree_map.h
 
 CMakeFiles/C_DS.dir/tree_map.c.o: ../tree_map.c
 CMakeFiles/C_DS.dir/tree_map.c.o: ../tree_map.h
