@@ -81,12 +81,10 @@ int set_con_cntns(struct Set * arraySet, void * ele, int(* compareTo)(const void
     _Bool bool = 0;
 
     for (int i = 0; i < arraySet->size; ++i) {
-
         if (compareTo(arraySet->head[i], ele) == 0) {
             bool = 1;
             break;
         }
-
     }
 
     return bool;
