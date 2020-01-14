@@ -15,7 +15,7 @@ struct Node {
  * v is the value.
  * return the struct Node with key equal to k and value equal to v and both the children pointers equal to NULL.
  */
-struct Node * map_tree_init_node(void * k, void * v);
+struct Node * tree_map_init_node(void * k, void * v);
 
 
 /*
@@ -25,7 +25,7 @@ struct Node * map_tree_init_node(void * k, void * v);
  * compare_to: dictates how the nodes are compared.
  * size: number of nodes in the tree map.
  */
-void map_tree_add(struct Node * tree, struct Node * ele, int(compare_to)(const void * const x, const void * const y), size_t * size);
+void tree_map_add(struct Node * tree, struct Node * ele, int(compare_to)(const void * const x, const void * const y), size_t * size);
 
 
 /*
@@ -36,38 +36,38 @@ void map_tree_add(struct Node * tree, struct Node * ele, int(compare_to)(const v
  * size: number of nodes in the tree.
  * return: deleted node.
  */
-struct Node * map_tree_del(struct Node * tree, struct Node * ele, int(compare_to)(const void * const x, const void * const y), size_t * size);
+struct Node * tree_map_del(struct Node * tree, struct Node * ele, int(compare_to)(const void * const x, const void * const y), size_t * size);
 
 
 /*
  * Returns the node with the smallest value.
  * return: node with the smallest value.
  */
-struct Node * map_tree_min(struct Node * tree);
+struct Node * tree_map_min(struct Node * tree);
 
 
 /*
  * Returns the node with the largest value.
  * return: node with the smallest value.
  */
-struct Node * map_tree_max(struct Node * tree);
+struct Node * tree_map_max(struct Node * tree);
 
 
 /*
  * return: height of the tree.
  */
-size_t map_tree_height(struct Node * tree);
+size_t tree_map_height(struct Node * tree);
 
-struct Node * map_tree_update_node(struct Node * tree, struct Node * trgt_node, void * new_value, int(compare_to)(const void * const x, const void * const y));
+struct Node * tree_map_update_node(struct Node * tree, struct Node * trgt_node, void * new_value, int(compare_to)(const void * const x, const void * const y));
 
-void map_tree_inorder_traversal(struct Node * tree);
+void tree_map_inorder_traversal(struct Node * tree);
 
 
 /*
  * Checks if two map_tree are equal or not.
  */
-bool is_equal(struct Node * a, struct Node * b, int(compare_to)(void * x, void * y));
+bool tree_map_is_equal(struct Node * a, struct Node * b, int(compare_to)(void * x, void * y));
 
 // 0 absent
 // 1 present
-struct Node * map_tree_contains(struct Node * tree, struct Node ele, int(compare_to)(void * x, void * y));
+struct Node * tree_map_contains(struct Node * tree, struct Node ele, int(compare_to)(void * x, void * y));
