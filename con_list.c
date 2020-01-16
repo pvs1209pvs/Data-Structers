@@ -11,7 +11,8 @@ void con_list_init(struct List *list, size_t cpcty) {
 
 void con_list_add(struct List *list, void *ele) {
   if (list->size == list->cpcty) con_list_grow(list);
-  *(list->head + list->size++) = ele;
+  list->head[list->size++] = ele;
+  //*(list->head + list->size++) = ele;
 }
 
 

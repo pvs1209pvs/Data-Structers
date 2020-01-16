@@ -1,4 +1,4 @@
-/home/param/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/191.6707.62/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_C_COMPILER=/usr/bin/gcc -G "CodeBlocks - Unix Makefiles" /home/param/Desktop/Data-Structers-C
+/home/param/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/191.6707.62/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_C_COMPILER=/usr/bin/gcc -G "CodeBlocks - Unix Makefiles" /home/param/Desktop/C-Projects/Data-Structers-C
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/param/Desktop/Data-Structers-C/cmake-build-debug
+-- Build files have been written to: /home/param/Desktop/C-Projects/Data-Structers-C/cmake-build-debug

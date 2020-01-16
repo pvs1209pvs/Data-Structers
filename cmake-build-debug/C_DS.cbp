@@ -8,28 +8,28 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/param/Desktop/Data-Structers-C/cmake-build-debug"/>
+				<Option working_dir="/home/param/Desktop/C-Projects/Data-Structers-C/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/param/Desktop/Data-Structers-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/param/Desktop/Data-Structers-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/param/Desktop/Data-Structers-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/param/Desktop/Data-Structers-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/param/Desktop/C-Projects/Data-Structers-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/param/Desktop/C-Projects/Data-Structers-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/param/Desktop/C-Projects/Data-Structers-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/param/Desktop/C-Projects/Data-Structers-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/param/Desktop/Data-Structers-C/cmake-build-debug"/>
+				<Option working_dir="/home/param/Desktop/C-Projects/Data-Structers-C/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/param/Desktop/Data-Structers-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/param/Desktop/Data-Structers-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/param/Desktop/Data-Structers-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/param/Desktop/Data-Structers-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/param/Desktop/C-Projects/Data-Structers-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/param/Desktop/C-Projects/Data-Structers-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/param/Desktop/C-Projects/Data-Structers-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/param/Desktop/C-Projects/Data-Structers-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="C_DS">
-				<Option output="/home/param/Desktop/Data-Structers-C/cmake-build-debug/C_DS" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/param/Desktop/Data-Structers-C/cmake-build-debug"/>
+				<Option output="/home/param/Desktop/C-Projects/Data-Structers-C/cmake-build-debug/C_DS" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/param/Desktop/C-Projects/Data-Structers-C/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -41,15 +41,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/param/Desktop/Data-Structers-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 C_DS"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/param/Desktop/Data-Structers-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/param/Desktop/Data-Structers-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/param/Desktop/Data-Structers-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/param/Desktop/C-Projects/Data-Structers-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 C_DS"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/param/Desktop/C-Projects/Data-Structers-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/param/Desktop/C-Projects/Data-Structers-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/param/Desktop/C-Projects/Data-Structers-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="C_DS/fast">
-				<Option output="/home/param/Desktop/Data-Structers-C/cmake-build-debug/C_DS" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/param/Desktop/Data-Structers-C/cmake-build-debug"/>
+				<Option output="/home/param/Desktop/C-Projects/Data-Structers-C/cmake-build-debug/C_DS" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/param/Desktop/C-Projects/Data-Structers-C/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -61,66 +61,66 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/param/Desktop/Data-Structers-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 C_DS/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/param/Desktop/Data-Structers-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/param/Desktop/Data-Structers-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/param/Desktop/Data-Structers-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/param/Desktop/C-Projects/Data-Structers-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 C_DS/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/param/Desktop/C-Projects/Data-Structers-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/param/Desktop/C-Projects/Data-Structers-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/param/Desktop/C-Projects/Data-Structers-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/param/Desktop/Data-Structers-C/cmake-build-debug"/>
+				<Option working_dir="/home/param/Desktop/C-Projects/Data-Structers-C/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/param/Desktop/Data-Structers-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/param/Desktop/Data-Structers-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/param/Desktop/Data-Structers-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/param/Desktop/Data-Structers-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/param/Desktop/C-Projects/Data-Structers-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/param/Desktop/C-Projects/Data-Structers-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/param/Desktop/C-Projects/Data-Structers-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/param/Desktop/C-Projects/Data-Structers-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/param/Desktop/Data-Structers-C/con_list.c">
+		<Unit filename="/home/param/Desktop/C-Projects/Data-Structers-C/con_list.c">
 			<Option target="C_DS"/>
 		</Unit>
-		<Unit filename="/home/param/Desktop/Data-Structers-C/con_list.h">
+		<Unit filename="/home/param/Desktop/C-Projects/Data-Structers-C/con_list.h">
 			<Option target="C_DS"/>
 		</Unit>
-		<Unit filename="/home/param/Desktop/Data-Structers-C/con_set.c">
+		<Unit filename="/home/param/Desktop/C-Projects/Data-Structers-C/con_set.c">
 			<Option target="C_DS"/>
 		</Unit>
-		<Unit filename="/home/param/Desktop/Data-Structers-C/con_set.h">
+		<Unit filename="/home/param/Desktop/C-Projects/Data-Structers-C/con_set.h">
 			<Option target="C_DS"/>
 		</Unit>
-		<Unit filename="/home/param/Desktop/Data-Structers-C/con_stack.c">
+		<Unit filename="/home/param/Desktop/C-Projects/Data-Structers-C/con_stack.c">
 			<Option target="C_DS"/>
 		</Unit>
-		<Unit filename="/home/param/Desktop/Data-Structers-C/con_stack.h">
+		<Unit filename="/home/param/Desktop/C-Projects/Data-Structers-C/con_stack.h">
 			<Option target="C_DS"/>
 		</Unit>
-		<Unit filename="/home/param/Desktop/Data-Structers-C/link_list.c">
+		<Unit filename="/home/param/Desktop/C-Projects/Data-Structers-C/link_list.c">
 			<Option target="C_DS"/>
 		</Unit>
-		<Unit filename="/home/param/Desktop/Data-Structers-C/link_list.h">
+		<Unit filename="/home/param/Desktop/C-Projects/Data-Structers-C/link_list.h">
 			<Option target="C_DS"/>
 		</Unit>
-		<Unit filename="/home/param/Desktop/Data-Structers-C/link_set.h">
+		<Unit filename="/home/param/Desktop/C-Projects/Data-Structers-C/link_set.h">
 			<Option target="C_DS"/>
 		</Unit>
-		<Unit filename="/home/param/Desktop/Data-Structers-C/prio_queue.c">
+		<Unit filename="/home/param/Desktop/C-Projects/Data-Structers-C/prio_queue.c">
 			<Option target="C_DS"/>
 		</Unit>
-		<Unit filename="/home/param/Desktop/Data-Structers-C/prio_queue.h">
+		<Unit filename="/home/param/Desktop/C-Projects/Data-Structers-C/prio_queue.h">
 			<Option target="C_DS"/>
 		</Unit>
-		<Unit filename="/home/param/Desktop/Data-Structers-C/test.c">
+		<Unit filename="/home/param/Desktop/C-Projects/Data-Structers-C/test.c">
 			<Option target="C_DS"/>
 		</Unit>
-		<Unit filename="/home/param/Desktop/Data-Structers-C/tree_map.c">
+		<Unit filename="/home/param/Desktop/C-Projects/Data-Structers-C/tree_map.c">
 			<Option target="C_DS"/>
 		</Unit>
-		<Unit filename="/home/param/Desktop/Data-Structers-C/tree_map.h">
+		<Unit filename="/home/param/Desktop/C-Projects/Data-Structers-C/tree_map.h">
 			<Option target="C_DS"/>
 		</Unit>
-		<Unit filename="/home/param/Desktop/Data-Structers-C/CMakeLists.txt">
+		<Unit filename="/home/param/Desktop/C-Projects/Data-Structers-C/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

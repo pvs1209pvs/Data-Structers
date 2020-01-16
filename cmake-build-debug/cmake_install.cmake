@@ -1,4 +1,4 @@
-# Install script for directory: /home/param/Desktop/Data-Structers-C
+# Install script for directory: /home/param/Desktop/C-Projects/Data-Structers-C
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/param/Desktop/Data-Structers-C/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/param/Desktop/C-Projects/Data-Structers-C/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
