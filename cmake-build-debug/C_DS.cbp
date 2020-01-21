@@ -111,12 +111,6 @@
 		<Unit filename="/home/param/Desktop/C-Projects/Data-Structers-C/link_set.h">
 			<Option target="C_DS"/>
 		</Unit>
-		<Unit filename="/home/param/Desktop/C-Projects/Data-Structers-C/prio_queue.c">
-			<Option target="C_DS"/>
-		</Unit>
-		<Unit filename="/home/param/Desktop/C-Projects/Data-Structers-C/prio_queue.h">
-			<Option target="C_DS"/>
-		</Unit>
 		<Unit filename="/home/param/Desktop/C-Projects/Data-Structers-C/test.c">
 			<Option target="C_DS"/>
 		</Unit>

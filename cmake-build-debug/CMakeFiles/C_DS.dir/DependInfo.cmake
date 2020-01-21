@@ -9,7 +9,6 @@ set(CMAKE_DEPENDS_CHECK_C
   "/home/param/Desktop/C-Projects/Data-Structers-C/con_set.c" "/home/param/Desktop/C-Projects/Data-Structers-C/cmake-build-debug/CMakeFiles/C_DS.dir/con_set.c.o"
   "/home/param/Desktop/C-Projects/Data-Structers-C/con_stack.c" "/home/param/Desktop/C-Projects/Data-Structers-C/cmake-build-debug/CMakeFiles/C_DS.dir/con_stack.c.o"
   "/home/param/Desktop/C-Projects/Data-Structers-C/link_list.c" "/home/param/Desktop/C-Projects/Data-Structers-C/cmake-build-debug/CMakeFiles/C_DS.dir/link_list.c.o"
-  "/home/param/Desktop/C-Projects/Data-Structers-C/prio_queue.c" "/home/param/Desktop/C-Projects/Data-Structers-C/cmake-build-debug/CMakeFiles/C_DS.dir/prio_queue.c.o"
   "/home/param/Desktop/C-Projects/Data-Structers-C/test.c" "/home/param/Desktop/C-Projects/Data-Structers-C/cmake-build-debug/CMakeFiles/C_DS.dir/test.c.o"
   "/home/param/Desktop/C-Projects/Data-Structers-C/tree_priority_queue.c" "/home/param/Desktop/C-Projects/Data-Structers-C/cmake-build-debug/CMakeFiles/C_DS.dir/tree_priority_queue.c.o"
   )

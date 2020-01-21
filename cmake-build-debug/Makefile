@@ -258,33 +258,6 @@ link_list.c.s:
 	$(MAKE) -f CMakeFiles/C_DS.dir/build.make CMakeFiles/C_DS.dir/link_list.c.s
 .PHONY : link_list.c.s
 
-prio_queue.o: prio_queue.c.o
-
-.PHONY : prio_queue.o
-
-# target to build an object file
-prio_queue.c.o:
-	$(MAKE) -f CMakeFiles/C_DS.dir/build.make CMakeFiles/C_DS.dir/prio_queue.c.o
-.PHONY : prio_queue.c.o
-
-prio_queue.i: prio_queue.c.i
-
-.PHONY : prio_queue.i
-
-# target to preprocess a source file
-prio_queue.c.i:
-	$(MAKE) -f CMakeFiles/C_DS.dir/build.make CMakeFiles/C_DS.dir/prio_queue.c.i
-.PHONY : prio_queue.c.i
-
-prio_queue.s: prio_queue.c.s
-
-.PHONY : prio_queue.s
-
-# target to generate assembly for a file
-prio_queue.c.s:
-	$(MAKE) -f CMakeFiles/C_DS.dir/build.make CMakeFiles/C_DS.dir/prio_queue.c.s
-.PHONY : prio_queue.c.s
-
 test.o: test.c.o
 
 .PHONY : test.o
@@ -363,9 +336,6 @@ help:
 	@echo "... link_list.o"
 	@echo "... link_list.i"
 	@echo "... link_list.s"
-	@echo "... prio_queue.o"
-	@echo "... prio_queue.i"
-	@echo "... prio_queue.s"
 	@echo "... test.o"
 	@echo "... test.i"
 	@echo "... test.s"

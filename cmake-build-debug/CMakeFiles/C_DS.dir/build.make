@@ -96,22 +96,9 @@ CMakeFiles/C_DS.dir/link_list.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/C_DS.dir/link_list.c.s"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/param/Desktop/C-Projects/Data-Structers-C/link_list.c -o CMakeFiles/C_DS.dir/link_list.c.s
 
-CMakeFiles/C_DS.dir/prio_queue.c.o: CMakeFiles/C_DS.dir/flags.make
-CMakeFiles/C_DS.dir/prio_queue.c.o: ../prio_queue.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/param/Desktop/C-Projects/Data-Structers-C/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/C_DS.dir/prio_queue.c.o"
-	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/C_DS.dir/prio_queue.c.o   -c /home/param/Desktop/C-Projects/Data-Structers-C/prio_queue.c
-
-CMakeFiles/C_DS.dir/prio_queue.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/C_DS.dir/prio_queue.c.i"
-	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/param/Desktop/C-Projects/Data-Structers-C/prio_queue.c > CMakeFiles/C_DS.dir/prio_queue.c.i
-
-CMakeFiles/C_DS.dir/prio_queue.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/C_DS.dir/prio_queue.c.s"
-	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/param/Desktop/C-Projects/Data-Structers-C/prio_queue.c -o CMakeFiles/C_DS.dir/prio_queue.c.s
-
 CMakeFiles/C_DS.dir/con_set.c.o: CMakeFiles/C_DS.dir/flags.make
 CMakeFiles/C_DS.dir/con_set.c.o: ../con_set.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/param/Desktop/C-Projects/Data-Structers-C/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/C_DS.dir/con_set.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/param/Desktop/C-Projects/Data-Structers-C/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/C_DS.dir/con_set.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/C_DS.dir/con_set.c.o   -c /home/param/Desktop/C-Projects/Data-Structers-C/con_set.c
 
 CMakeFiles/C_DS.dir/con_set.c.i: cmake_force
@@ -124,7 +111,7 @@ CMakeFiles/C_DS.dir/con_set.c.s: cmake_force
 
 CMakeFiles/C_DS.dir/con_stack.c.o: CMakeFiles/C_DS.dir/flags.make
 CMakeFiles/C_DS.dir/con_stack.c.o: ../con_stack.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/param/Desktop/C-Projects/Data-Structers-C/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/C_DS.dir/con_stack.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/param/Desktop/C-Projects/Data-Structers-C/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/C_DS.dir/con_stack.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/C_DS.dir/con_stack.c.o   -c /home/param/Desktop/C-Projects/Data-Structers-C/con_stack.c
 
 CMakeFiles/C_DS.dir/con_stack.c.i: cmake_force
@@ -137,7 +124,7 @@ CMakeFiles/C_DS.dir/con_stack.c.s: cmake_force
 
 CMakeFiles/C_DS.dir/test.c.o: CMakeFiles/C_DS.dir/flags.make
 CMakeFiles/C_DS.dir/test.c.o: ../test.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/param/Desktop/C-Projects/Data-Structers-C/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/C_DS.dir/test.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/param/Desktop/C-Projects/Data-Structers-C/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/C_DS.dir/test.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/C_DS.dir/test.c.o   -c /home/param/Desktop/C-Projects/Data-Structers-C/test.c
 
 CMakeFiles/C_DS.dir/test.c.i: cmake_force
@@ -150,7 +137,7 @@ CMakeFiles/C_DS.dir/test.c.s: cmake_force
 
 CMakeFiles/C_DS.dir/tree_priority_queue.c.o: CMakeFiles/C_DS.dir/flags.make
 CMakeFiles/C_DS.dir/tree_priority_queue.c.o: ../tree_priority_queue.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/param/Desktop/C-Projects/Data-Structers-C/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/C_DS.dir/tree_priority_queue.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/param/Desktop/C-Projects/Data-Structers-C/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/C_DS.dir/tree_priority_queue.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/C_DS.dir/tree_priority_queue.c.o   -c /home/param/Desktop/C-Projects/Data-Structers-C/tree_priority_queue.c
 
 CMakeFiles/C_DS.dir/tree_priority_queue.c.i: cmake_force
@@ -166,7 +153,6 @@ C_DS_OBJECTS = \
 "CMakeFiles/C_DS.dir/binary_tree.c.o" \
 "CMakeFiles/C_DS.dir/con_list.c.o" \
 "CMakeFiles/C_DS.dir/link_list.c.o" \
-"CMakeFiles/C_DS.dir/prio_queue.c.o" \
 "CMakeFiles/C_DS.dir/con_set.c.o" \
 "CMakeFiles/C_DS.dir/con_stack.c.o" \
 "CMakeFiles/C_DS.dir/test.c.o" \
@@ -178,14 +164,13 @@ C_DS_EXTERNAL_OBJECTS =
 C_DS: CMakeFiles/C_DS.dir/binary_tree.c.o
 C_DS: CMakeFiles/C_DS.dir/con_list.c.o
 C_DS: CMakeFiles/C_DS.dir/link_list.c.o
-C_DS: CMakeFiles/C_DS.dir/prio_queue.c.o
 C_DS: CMakeFiles/C_DS.dir/con_set.c.o
 C_DS: CMakeFiles/C_DS.dir/con_stack.c.o
 C_DS: CMakeFiles/C_DS.dir/test.c.o
 C_DS: CMakeFiles/C_DS.dir/tree_priority_queue.c.o
 C_DS: CMakeFiles/C_DS.dir/build.make
 C_DS: CMakeFiles/C_DS.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/param/Desktop/C-Projects/Data-Structers-C/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking C executable C_DS"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/param/Desktop/C-Projects/Data-Structers-C/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking C executable C_DS"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/C_DS.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
