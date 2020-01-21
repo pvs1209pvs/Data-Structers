@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/param/Desktop/C-Projects/Data-Structers-C/binary_tree.h
+stddef.h
+-
+stdbool.h
+-
+
+/home/param/Desktop/C-Projects/Data-Structers-C/test.c
+stdlib.h
+-
+stdio.h
+-
+string.h
+-
+tree_priority_queue.h
+/home/param/Desktop/C-Projects/Data-Structers-C/tree_priority_queue.h
+
+/home/param/Desktop/C-Projects/Data-Structers-C/tree_priority_queue.h
+binary_tree.h
+/home/param/Desktop/C-Projects/Data-Structers-C/binary_tree.h
+

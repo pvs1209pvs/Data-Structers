@@ -39,6 +39,7 @@ void link_list_append_node(struct Link_List * list, struct List_Node * ele) {
 
 
 void link_list_append_ele(struct Link_List * list, void * ele) {
+
     struct List_Node * eleNode = malloc(sizeof(struct List_Node));
     eleNode->value = ele;
     eleNode->next = NULL;
@@ -73,9 +74,7 @@ void link_list_add_node_at(struct Link_List * list, struct List_Node * ele, size
 
 void link_list_add_ele_at(struct Link_List * list, void * ele, size_t index) {
 
-    if (index < 0 || index > list->size) {
-        exit(1);
-    }
+    link_list_index_check(list, index);
 
     struct List_Node * eleNode = malloc(sizeof(struct List_Node));
     eleNode->value = ele;
@@ -190,7 +189,7 @@ _Bool link_list_cnts(struct Link_List * list, void * ele, int(compareTo)(const v
     struct List_Node * p = list->head;
 
     for (size_t i = 0; i < list->size; i++) {
-        // if compareTo return 0 then it means the compated elements are the same
+        // if compareTo return 0 then it means the compared elements are the same
         if (compareTo(ele, p->value) == 0) {
             return 1;
         }

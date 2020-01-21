@@ -1,1 +1,1 @@
-/usr/bin/gcc -g   CMakeFiles/C_DS.dir/tree_map.c.o CMakeFiles/C_DS.dir/con_list.c.o CMakeFiles/C_DS.dir/link_list.c.o CMakeFiles/C_DS.dir/prio_queue.c.o CMakeFiles/C_DS.dir/con_set.c.o CMakeFiles/C_DS.dir/con_stack.c.o CMakeFiles/C_DS.dir/test.c.o  -o C_DS 
+/usr/bin/gcc -g   CMakeFiles/C_DS.dir/binary_tree.c.o CMakeFiles/C_DS.dir/con_list.c.o CMakeFiles/C_DS.dir/link_list.c.o CMakeFiles/C_DS.dir/prio_queue.c.o CMakeFiles/C_DS.dir/con_set.c.o CMakeFiles/C_DS.dir/con_stack.c.o CMakeFiles/C_DS.dir/test.c.o CMakeFiles/C_DS.dir/tree_priority_queue.c.o  -o C_DS 

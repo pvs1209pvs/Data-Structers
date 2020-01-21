@@ -78,6 +78,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/param/Desktop/C-Projects/Data-Structers-C/binary_tree.c">
+			<Option target="C_DS"/>
+		</Unit>
+		<Unit filename="/home/param/Desktop/C-Projects/Data-Structers-C/binary_tree.h">
+			<Option target="C_DS"/>
+		</Unit>
 		<Unit filename="/home/param/Desktop/C-Projects/Data-Structers-C/con_list.c">
 			<Option target="C_DS"/>
 		</Unit>
@@ -114,10 +120,10 @@
 		<Unit filename="/home/param/Desktop/C-Projects/Data-Structers-C/test.c">
 			<Option target="C_DS"/>
 		</Unit>
-		<Unit filename="/home/param/Desktop/C-Projects/Data-Structers-C/tree_map.c">
+		<Unit filename="/home/param/Desktop/C-Projects/Data-Structers-C/tree_priority_queue.c">
 			<Option target="C_DS"/>
 		</Unit>
-		<Unit filename="/home/param/Desktop/C-Projects/Data-Structers-C/tree_map.h">
+		<Unit filename="/home/param/Desktop/C-Projects/Data-Structers-C/tree_priority_queue.h">
 			<Option target="C_DS"/>
 		</Unit>
 		<Unit filename="/home/param/Desktop/C-Projects/Data-Structers-C/CMakeLists.txt">

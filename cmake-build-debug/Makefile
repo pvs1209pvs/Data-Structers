@@ -123,6 +123,33 @@ C_DS/fast:
 	$(MAKE) -f CMakeFiles/C_DS.dir/build.make CMakeFiles/C_DS.dir/build
 .PHONY : C_DS/fast
 
+binary_tree.o: binary_tree.c.o
+
+.PHONY : binary_tree.o
+
+# target to build an object file
+binary_tree.c.o:
+	$(MAKE) -f CMakeFiles/C_DS.dir/build.make CMakeFiles/C_DS.dir/binary_tree.c.o
+.PHONY : binary_tree.c.o
+
+binary_tree.i: binary_tree.c.i
+
+.PHONY : binary_tree.i
+
+# target to preprocess a source file
+binary_tree.c.i:
+	$(MAKE) -f CMakeFiles/C_DS.dir/build.make CMakeFiles/C_DS.dir/binary_tree.c.i
+.PHONY : binary_tree.c.i
+
+binary_tree.s: binary_tree.c.s
+
+.PHONY : binary_tree.s
+
+# target to generate assembly for a file
+binary_tree.c.s:
+	$(MAKE) -f CMakeFiles/C_DS.dir/build.make CMakeFiles/C_DS.dir/binary_tree.c.s
+.PHONY : binary_tree.c.s
+
 con_list.o: con_list.c.o
 
 .PHONY : con_list.o
@@ -285,32 +312,32 @@ test.c.s:
 	$(MAKE) -f CMakeFiles/C_DS.dir/build.make CMakeFiles/C_DS.dir/test.c.s
 .PHONY : test.c.s
 
-tree_map.o: tree_map.c.o
+tree_priority_queue.o: tree_priority_queue.c.o
 
-.PHONY : tree_map.o
+.PHONY : tree_priority_queue.o
 
 # target to build an object file
-tree_map.c.o:
-	$(MAKE) -f CMakeFiles/C_DS.dir/build.make CMakeFiles/C_DS.dir/tree_map.c.o
-.PHONY : tree_map.c.o
+tree_priority_queue.c.o:
+	$(MAKE) -f CMakeFiles/C_DS.dir/build.make CMakeFiles/C_DS.dir/tree_priority_queue.c.o
+.PHONY : tree_priority_queue.c.o
 
-tree_map.i: tree_map.c.i
+tree_priority_queue.i: tree_priority_queue.c.i
 
-.PHONY : tree_map.i
+.PHONY : tree_priority_queue.i
 
 # target to preprocess a source file
-tree_map.c.i:
-	$(MAKE) -f CMakeFiles/C_DS.dir/build.make CMakeFiles/C_DS.dir/tree_map.c.i
-.PHONY : tree_map.c.i
+tree_priority_queue.c.i:
+	$(MAKE) -f CMakeFiles/C_DS.dir/build.make CMakeFiles/C_DS.dir/tree_priority_queue.c.i
+.PHONY : tree_priority_queue.c.i
 
-tree_map.s: tree_map.c.s
+tree_priority_queue.s: tree_priority_queue.c.s
 
-.PHONY : tree_map.s
+.PHONY : tree_priority_queue.s
 
 # target to generate assembly for a file
-tree_map.c.s:
-	$(MAKE) -f CMakeFiles/C_DS.dir/build.make CMakeFiles/C_DS.dir/tree_map.c.s
-.PHONY : tree_map.c.s
+tree_priority_queue.c.s:
+	$(MAKE) -f CMakeFiles/C_DS.dir/build.make CMakeFiles/C_DS.dir/tree_priority_queue.c.s
+.PHONY : tree_priority_queue.c.s
 
 # Help Target
 help:
@@ -321,6 +348,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... C_DS"
 	@echo "... edit_cache"
+	@echo "... binary_tree.o"
+	@echo "... binary_tree.i"
+	@echo "... binary_tree.s"
 	@echo "... con_list.o"
 	@echo "... con_list.i"
 	@echo "... con_list.s"
@@ -339,9 +369,9 @@ help:
 	@echo "... test.o"
 	@echo "... test.i"
 	@echo "... test.s"
-	@echo "... tree_map.o"
-	@echo "... tree_map.i"
-	@echo "... tree_map.s"
+	@echo "... tree_priority_queue.o"
+	@echo "... tree_priority_queue.i"
+	@echo "... tree_priority_queue.s"
 .PHONY : help
 
 
