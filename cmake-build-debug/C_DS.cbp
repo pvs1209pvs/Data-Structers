@@ -102,6 +102,12 @@
 		<Unit filename="/home/param/Desktop/C-Projects/Data-Structers-C/con_stack.h">
 			<Option target="C_DS"/>
 		</Unit>
+		<Unit filename="/home/param/Desktop/C-Projects/Data-Structers-C/hashtable.c">
+			<Option target="C_DS"/>
+		</Unit>
+		<Unit filename="/home/param/Desktop/C-Projects/Data-Structers-C/hashtable.h">
+			<Option target="C_DS"/>
+		</Unit>
 		<Unit filename="/home/param/Desktop/C-Projects/Data-Structers-C/link_list.c">
 			<Option target="C_DS"/>
 		</Unit>

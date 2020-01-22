@@ -6,6 +6,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/C_DS.dir/con_stack.c.o"
   "CMakeFiles/C_DS.dir/test.c.o"
   "CMakeFiles/C_DS.dir/tree_priority_queue.c.o"
+  "CMakeFiles/C_DS.dir/hashtable.c.o"
   "C_DS.pdb"
   "C_DS"
 )

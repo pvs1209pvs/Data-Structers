@@ -15,3 +15,8 @@ There are two implmentation for Dyanmic Array
 * **Contigous**: Eelements are sorted in an array and the size of the array doubles when the max capacity is reached.
 * **Linked**: Elements are malloced before they are added to the list and pointer is maintained for the first element. Size of the list increases by one after each addition.
   
+Dynamic Array: linked, array
+Priority Queue: tree
+Stack: array
+Set: array
+Map:

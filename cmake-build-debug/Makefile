@@ -231,6 +231,33 @@ con_stack.c.s:
 	$(MAKE) -f CMakeFiles/C_DS.dir/build.make CMakeFiles/C_DS.dir/con_stack.c.s
 .PHONY : con_stack.c.s
 
+hashtable.o: hashtable.c.o
+
+.PHONY : hashtable.o
+
+# target to build an object file
+hashtable.c.o:
+	$(MAKE) -f CMakeFiles/C_DS.dir/build.make CMakeFiles/C_DS.dir/hashtable.c.o
+.PHONY : hashtable.c.o
+
+hashtable.i: hashtable.c.i
+
+.PHONY : hashtable.i
+
+# target to preprocess a source file
+hashtable.c.i:
+	$(MAKE) -f CMakeFiles/C_DS.dir/build.make CMakeFiles/C_DS.dir/hashtable.c.i
+.PHONY : hashtable.c.i
+
+hashtable.s: hashtable.c.s
+
+.PHONY : hashtable.s
+
+# target to generate assembly for a file
+hashtable.c.s:
+	$(MAKE) -f CMakeFiles/C_DS.dir/build.make CMakeFiles/C_DS.dir/hashtable.c.s
+.PHONY : hashtable.c.s
+
 link_list.o: link_list.c.o
 
 .PHONY : link_list.o
@@ -333,6 +360,9 @@ help:
 	@echo "... con_stack.o"
 	@echo "... con_stack.i"
 	@echo "... con_stack.s"
+	@echo "... hashtable.o"
+	@echo "... hashtable.i"
+	@echo "... hashtable.s"
 	@echo "... link_list.o"
 	@echo "... link_list.i"
 	@echo "... link_list.s"

@@ -13,14 +13,14 @@ CMakeFiles/C_DS.dir/con_set.c.o: ../con_set.h
 CMakeFiles/C_DS.dir/con_stack.c.o: ../con_stack.c
 CMakeFiles/C_DS.dir/con_stack.c.o: ../con_stack.h
 
+CMakeFiles/C_DS.dir/hashtable.c.o: ../hashtable.c
+CMakeFiles/C_DS.dir/hashtable.c.o: ../hashtable.h
+
 CMakeFiles/C_DS.dir/link_list.c.o: ../link_list.c
 CMakeFiles/C_DS.dir/link_list.c.o: ../link_list.h
 
-CMakeFiles/C_DS.dir/prio_queue.c.o: ../prio_queue.c
-
-CMakeFiles/C_DS.dir/test.c.o: ../binary_tree.h
+CMakeFiles/C_DS.dir/test.c.o: ../hashtable.h
 CMakeFiles/C_DS.dir/test.c.o: ../test.c
-CMakeFiles/C_DS.dir/test.c.o: ../tree_priority_queue.h
 
 CMakeFiles/C_DS.dir/tree_priority_queue.c.o: ../binary_tree.h
 CMakeFiles/C_DS.dir/tree_priority_queue.c.o: ../tree_priority_queue.c

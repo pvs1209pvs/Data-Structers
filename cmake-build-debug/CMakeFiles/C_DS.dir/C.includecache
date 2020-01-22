@@ -6,10 +6,16 @@
 
 #IncludeRegexTransform: 
 
-/home/param/Desktop/C-Projects/Data-Structers-C/binary_tree.h
-stddef.h
+/home/param/Desktop/C-Projects/Data-Structers-C/hashtable.c
+stdlib.h
 -
-stdbool.h
+stdio.h
+-
+hashtable.h
+/home/param/Desktop/C-Projects/Data-Structers-C/hashtable.h
+
+/home/param/Desktop/C-Projects/Data-Structers-C/hashtable.h
+stddef.h
 -
 
 /home/param/Desktop/C-Projects/Data-Structers-C/test.c
@@ -19,10 +25,6 @@ stdio.h
 -
 string.h
 -
-tree_priority_queue.h
-/home/param/Desktop/C-Projects/Data-Structers-C/tree_priority_queue.h
-
-/home/param/Desktop/C-Projects/Data-Structers-C/tree_priority_queue.h
-binary_tree.h
-/home/param/Desktop/C-Projects/Data-Structers-C/binary_tree.h
+hashtable.h
+/home/param/Desktop/C-Projects/Data-Structers-C/hashtable.h
 
