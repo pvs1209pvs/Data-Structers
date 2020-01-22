@@ -1,4 +1,4 @@
-# Data_Structures_C
+# Data-Structures-C
 My personal implementation for the following data structures. 
 * Dynmaic Array
 * Stack
