@@ -10,10 +10,13 @@ Every data structure must be initalized using _data_strucutre_implementation_ini
 
 ### Dynamic Array
 * **Contigous**
-* **Linked**:
-  
-Dynamic Array: linked, array
-Priority Queue: tree
-Stack: array
-Set: array
-Map:
+* **Linked**
+
+### Stack
+**Contigous**
+
+### Set
+**Contigous**
+
+### Priority Queue
+**Tree**
