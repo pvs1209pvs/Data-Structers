@@ -1,32 +1,30 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
-#include "hashtable.h"
+#include "binary_tree.h"
 
-
-size_t hash_func(const void * const h, size_t s) {
-    return strlen((char *) h)%s;
-}
-
-int compare(const void * const x, const void * const y) {
-    return strlen((char *) x) - strlen((char *) y);
+int compare_to(const void * x, const void * y){
+    return *(int*)x - *(int*)y;
 }
 
 int main() {
 
-    char * names[] = {"param", "dea", "chahat", "asma", "fahad", "celebrimbor"};
+    
+    int keys[] = {1,2,5,3,4};
+    int values[] = {10,20,50,30,40};
+    size_t size = 1;
 
-    struct Hash_Table ht;
-    hash_table_init(&ht, 5);
+    struct Binary_Node * root = binary_tree_init_node(&keys[0], &values[0]);
 
-    for (int i = 0; i < sizeof(names)/sizeof(names[0]); ++i)
-        hash_table_insert(&ht, names[i], hash_func);
+    for (size_t i = 1; i < 5; i++){
+          binary_tree_add(root, binary_tree_init_node(&keys[i], &values[i]), compare_to);
+    }
 
-    hash_table_remove(&ht, names[5], hash_func, compare);
-    hash_table_remove(&ht, names[0], hash_func, compare);
-    hash_table_remove(&ht, names[3], hash_func, compare);
-    hash_table_remove(&ht, names[1], hash_func, compare);
-
-    hash_table_print(ht);
+    binary_tree_inorder_traversal(root);
+    
+  
+    
+    //printf("%d %d", *(int*)root->right->key, *(int*)root->right->value);
+    
 
 }

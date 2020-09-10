@@ -16,26 +16,25 @@ struct Binary_Node * binary_tree_init_node(void * k, void * v) {
 } // init_node
 
 void binary_tree_add(struct Binary_Node * tree, struct Binary_Node * ele,
-                     int(compare_to(const void * const x, const void * const y)), size_t * size) {
+                     int(compare_to(const void * const x, const void * const y))) {
 
-    if (*size == 0) { // tree is empty
+    if (tree == NULL) { // tree is empty
+        printf("Error: Root node cannot be NULL. Give it a value key-value values before adding elements to the binary tree.");
+        exit(1);
         *tree = *ele;
-        (*size)++;
     } else {
 
         if (compare_to(ele->key, tree->key) < 0) { // ele < tree
             if (tree->left == NULL) {
                 tree->left = ele;
-                (*size)++;
             } else {
-                binary_tree_add(tree->left, ele, compare_to, size);
+                binary_tree_add(tree->left, ele, compare_to);
             }
         } else if (compare_to(ele->key, tree->key) > 0) { // ele > tree
             if (tree->right == NULL) {
                 tree->right = ele;
-                (*size)++;
             } else {
-                binary_tree_add(tree->right, ele, compare_to, size);
+                binary_tree_add(tree->right, ele, compare_to);
             }
         } else { // ele == tree
             return;
@@ -60,25 +59,21 @@ struct Binary_Node * binary_tree_max(struct Binary_Node * tree) {
 } // max
 
 struct Binary_Node * binary_tree_del(struct Binary_Node * tree, struct Binary_Node * ele,
-                                     int(compareTo)(const void * const x, const void * const y), size_t * size) {
+                                     int(compareTo)(const void * const x, const void * const y)) {
 
     if (compareTo(ele->key, tree->key) == 0) {
 
         if (tree->left == NULL && tree->right == NULL) { // zero children
-            (*size)--;
             return NULL;
         } else if (tree->left != NULL && tree->right == NULL) { // only left child
-            (*size)--;
             return tree->left;
         } else if (tree->right != NULL && tree->left == NULL) { // only right child
-            (*size)--;
             return tree->right;
         } else if (tree->left != NULL && tree->right != NULL) { // two children
             struct Binary_Node * replacer = binary_tree_max(tree->left);
             tree->key = replacer->key;
             tree->value = replacer->value;
-            tree->left = binary_tree_del(tree->left, replacer, compareTo, size);
-            (*size)--;
+            tree->left = binary_tree_del(tree->left, replacer, compareTo);
 //            struct Binary_Node * replacer = map_tree_min(tree->right);
 //            tree->key = replacer->key;
 //            tree->value = replacer->value;
@@ -90,9 +85,9 @@ struct Binary_Node * binary_tree_del(struct Binary_Node * tree, struct Binary_No
 
     }
     if (compareTo(ele->key, tree->key) < 0 && tree->left != NULL) {
-        tree->left = binary_tree_del(tree->left, ele, compareTo, size);
+        tree->left = binary_tree_del(tree->left, ele, compareTo);
     } else if (compareTo(ele->key, tree->key) > 0 && tree->right != NULL) {
-        tree->right = binary_tree_del(tree->right, ele, compareTo, size);
+        tree->right = binary_tree_del(tree->right, ele, compareTo);
     }
 
 

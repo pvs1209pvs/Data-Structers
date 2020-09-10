@@ -28,7 +28,7 @@ struct Binary_Node * binary_tree_init_node(void * k, void * v);
  * compare_to: dictates how the nodes are compared.
  * size: number of nodes in the tree map.
  */
-void binary_tree_add(struct Binary_Node * tree, struct Binary_Node * ele, int(compare_to)(const void * const x, const void * const y), size_t * size);
+void binary_tree_add(struct Binary_Node * tree, struct Binary_Node * ele, int(compare_to)(const void * const x, const void * const y));
 
 
 /*
@@ -39,7 +39,7 @@ void binary_tree_add(struct Binary_Node * tree, struct Binary_Node * ele, int(co
  * size: number of nodes in the tree.
  * return: deleted node.
  */
-struct Binary_Node * binary_tree_del(struct Binary_Node * tree, struct Binary_Node * ele, int(compare_to)(const void * const x, const void * const y), size_t * size);
+struct Binary_Node * binary_tree_del(struct Binary_Node * tree, struct Binary_Node * ele, int(compare_to)(const void * const x, const void * const y));
 
 
 /*

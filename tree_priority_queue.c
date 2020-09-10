@@ -11,14 +11,14 @@ void tree_priority_queue_init(struct Priority_Queue * priority_queue) {
 void tree_priority_queue_add(struct Priority_Queue * priority_queue, void * ele,
                              int(compare)(const void * const x, const void * const y)) {
 
-    binary_tree_add(&priority_queue->p_queue, binary_tree_init_node(ele, ele), compare, &priority_queue->size);
+    binary_tree_add(&priority_queue->p_queue, binary_tree_init_node(ele, ele), compare);
 
 }
 
 void tree_priority_queue_remove(struct Priority_Queue * priority_queue, void * ele,
                                 int(compare)(const void * const x, const void * const y)) {
     struct Binary_Node * bn = binary_tree_init_node(ele, ele);
-    binary_tree_del(&priority_queue->p_queue, bn, compare, &priority_queue->size);
+    binary_tree_del(&priority_queue->p_queue, bn, compare);
     free(bn);
 }
 
