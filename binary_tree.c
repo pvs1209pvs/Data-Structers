@@ -4,11 +4,10 @@
 #include <string.h>
 #include <stdbool.h>
 
-struct Binary_Node * binary_tree_init_node(void * k, void * v) {
+struct Binary_Node * binary_tree_init_node(void * k) {
 
     struct Binary_Node * result = malloc(sizeof(struct Binary_Node));
     result->key = k;
-    result->value = v;
     result->left = NULL;
     result->right = NULL;
     return result;
@@ -72,7 +71,6 @@ struct Binary_Node * binary_tree_del(struct Binary_Node * tree, struct Binary_No
         } else if (tree->left != NULL && tree->right != NULL) { // two children
             struct Binary_Node * replacer = binary_tree_max(tree->left);
             tree->key = replacer->key;
-            tree->value = replacer->value;
             tree->left = binary_tree_del(tree->left, replacer, compareTo);
 //            struct Binary_Node * replacer = map_tree_min(tree->right);
 //            tree->key = replacer->key;
@@ -95,7 +93,7 @@ struct Binary_Node * binary_tree_del(struct Binary_Node * tree, struct Binary_No
 
 
 struct Binary_Node *
-binary_tree_contains(struct Binary_Node * tree, struct Binary_Node ele, int(compareTo(void * x, void * y))) {
+binary_tree_contains(struct Binary_Node * tree, struct Binary_Node ele, int(compareTo(const void * const x, const void * const y))) {
 
     if (compareTo(ele.key, tree->key) < 0 && tree->left != NULL) {
         binary_tree_contains(tree->left, ele, compareTo);
@@ -127,8 +125,8 @@ binary_tree_update_node(struct Binary_Node * tree, struct Binary_Node * trgt_nod
 
     //printf("check:  %d %d \n", *(int*)tree->value, *(int*)trgt_node->value);
 
-    if (compare_to(tree->value, trgt_node->value) == 0) {
-        tree->value = new_value;
+    if (compare_to(tree->key, trgt_node->key) == 0) {
+        tree->key = new_value;
     }
 
     if (tree->left != NULL)
@@ -148,7 +146,7 @@ void binary_tree_inorder_traversal(struct Binary_Node * tree) {
     if (tree->left != NULL)
         binary_tree_inorder_traversal(tree->left);
 
-    printf("%d %d\n", *(int *) tree->key, *(int *) tree->value);
+    printf("%d\n", *(int *) tree->key);
 
     if (tree->right != NULL)
         binary_tree_inorder_traversal(tree->right);

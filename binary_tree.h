@@ -6,7 +6,6 @@
 
 struct Binary_Node {
     void * key; // key
-    void * value; // value
     struct Binary_Node * left; // left child
     struct Binary_Node * right; // right child
 };
@@ -18,7 +17,7 @@ struct Binary_Node {
  * v is the value.
  * return the struct Binary_Node with key equal to k and value equal to v and both the children pointers equal to NULL.
  */
-struct Binary_Node * binary_tree_init_node(void * k, void * v);
+struct Binary_Node * binary_tree_init_node(void * k);
 
 
 /*
@@ -73,6 +72,6 @@ bool binary_tree_is_equal(struct Binary_Node * a, struct Binary_Node * b, int(co
 
 // 0 absent
 // 1 present
-struct Binary_Node * binary_tree_contains(struct Binary_Node * tree, struct Binary_Node ele, int(compare_to)(void * x, void * y));
+struct Binary_Node * binary_tree_contains(struct Binary_Node * tree, struct Binary_Node ele, int(compare_to)(const void * const x, const void * const y));
 
 #endif //C_DS_BINARY_TREE_H
