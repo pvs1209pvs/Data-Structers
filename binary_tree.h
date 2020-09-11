@@ -3,6 +3,7 @@
 
 #include <stddef.h>
 #include <stdbool.h>
+#include "con_list.h"
 
 struct Binary_Node {
     void * key; // key
@@ -62,8 +63,9 @@ size_t binary_tree_height(struct Binary_Node * tree);
 
 struct Binary_Node * binary_tree_update_node(struct Binary_Node * tree, struct Binary_Node * trgt_node, void * new_value, int(compare_to)(const void * const x, const void * const y));
 
-void binary_tree_inorder_traversal(struct Binary_Node * tree);
+void binary_tree_inorder_traversal(struct Binary_Node * tree, struct List * list);
 
+struct List binary_tree_ele_array(struct Binary_Node * tree);
 
 /*
  * Checks if two map_tree are equal or not.

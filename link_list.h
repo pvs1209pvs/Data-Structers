@@ -1,6 +1,10 @@
 // -1 improper termination
 // 1 proper termination
 
+#ifndef C_DS_LINK_LIST_H
+#define C_DS_LINK_LIST_H
+
+
 struct List_Node {
     void * value; // literal values can't be passed in here, only address can be passed
     struct List_Node * next;
@@ -13,7 +17,7 @@ struct Link_List {
 } list_link;
 
 // array list : impl what
-void link_list_int(struct Link_List * list);
+void link_list_init(struct Link_List * list);
 
 void link_list_prepend_node(struct Link_List * link_list, struct List_Node * ele);
 
@@ -46,3 +50,5 @@ void link_list_free(struct Link_List * link_list);
 void ** link_list_to_array(struct Link_List * link_list);
 
 void link_list_index_check(struct Link_List * list, size_t index);
+
+#endif

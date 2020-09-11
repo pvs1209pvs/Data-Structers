@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdbool.h>
+#include "map.h"
 
 struct Binary_Node * binary_tree_init_node(void * k) {
 
@@ -17,21 +18,25 @@ struct Binary_Node * binary_tree_init_node(void * k) {
 void binary_tree_add(struct Binary_Node * tree, struct Binary_Node * ele,
                      int(compare_to(const void * const x, const void * const y))) {
 
+                       
+
     if (tree == NULL) { // tree is empty
         printf("Error: Root node cannot be NULL. Give it a value key-value values before adding elements to the binary tree.");
         exit(1);
-        *tree = *ele;
     } else {
 
         if (compare_to(ele->key, tree->key) < 0) { // ele < tree
             if (tree->left == NULL) {
                 tree->left = ele;
+                struct Pair * p = (struct Pair*)ele;
+                printf("%d \n", *(int*)p->key);
             } else {
                 binary_tree_add(tree->left, ele, compare_to);
             }
         } else if (compare_to(ele->key, tree->key) > 0) { // ele > tree
             if (tree->right == NULL) {
                 tree->right = ele;
+               
             } else {
                 binary_tree_add(tree->right, ele, compare_to);
             }
@@ -139,19 +144,35 @@ binary_tree_update_node(struct Binary_Node * tree, struct Binary_Node * trgt_nod
 
 }
 
-void binary_tree_inorder_traversal(struct Binary_Node * tree) {
+void binary_tree_inorder_traversal(struct Binary_Node * tree, struct List * list) {
 
     if(tree == NULL) return;
 
-    if (tree->left != NULL)
-        binary_tree_inorder_traversal(tree->left);
+    if (tree->left != NULL){
+        binary_tree_inorder_traversal(tree->left, list);
+    }
 
-    printf("%d\n", *(int *) tree->key);
+    con_list_add(list, tree->key);
 
-    if (tree->right != NULL)
-        binary_tree_inorder_traversal(tree->right);
+    //printf("%d\n", *(int *) tree->key);
+
+    if (tree->right != NULL){
+        binary_tree_inorder_traversal(tree->right, list);
+    }
 
 }
+
+struct List binary_tree_ele_array(struct Binary_Node * tree){
+
+   struct List l;
+   con_list_init(&l, 2);
+
+   binary_tree_inorder_traversal(tree, &l);
+
+   return l;
+
+}
+
 
 bool binary_tree_is_equal(struct Binary_Node * a, struct Binary_Node * b, int(compareTo)(void * x, void * y)) {
 

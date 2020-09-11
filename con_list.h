@@ -1,6 +1,7 @@
 #ifndef DATA_STRUCTERS_con_list_H
 #define DATA_STRUCTERS_con_list_H
 
+
 struct List {
     size_t size;
     size_t cpcty;

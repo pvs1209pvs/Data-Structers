@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include "link_list.h"
 
+
 void list_link_init(struct Link_List * list) {
     list->size = 0;
     list->head = NULL;
