@@ -24,7 +24,7 @@ void con_list_set_at(const struct List * const list , size_t i, void * const ele
 
 _Bool con_list_cntns(struct List * list, void * ele, int(compareTo)(const void * const x, const void * const y));
 
-_Bool con_list_is_empty(struct List * list);
+_Bool con_list_is_empty(const struct List * const list);
 
 void con_list_grow(struct List * list);
 

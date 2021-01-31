@@ -110,7 +110,7 @@ _Bool con_list_cntns(struct List *list, void *ele, int(compareTo)(const void * c
  * @param list List that has to be checked.
  * @return 1 is the list is empty, else 0.
 */
-_Bool con_list_isEmpty(struct List *list) {
+_Bool con_list_isEmpty(const struct List * const list) {
   return list->size == 0;
 }
 

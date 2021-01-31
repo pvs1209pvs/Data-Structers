@@ -1,14 +1,13 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
-#include "con_list.h"
-
-
+#include <stdbool.h>
+#include "con_stack.h"
 
 int main() {
 
-    struct List myList;
-    con_list_init(&myList, 2);
+    struct Stack my_stack;
+    stack_con_init(&my_stack, 2);
 
     int a, b, c, d;
     a = 5;
@@ -16,20 +15,19 @@ int main() {
     c = 15;
     d = 20;
 
-    con_list_add(&myList, &a);
-    con_list_add(&myList, &b);
-    con_list_add(&myList, &c);
-    con_list_add(&myList, &d);
-
-   (con_list_dlt_indx(&myList, 2));
-
-    for (size_t i = 0; i < con_list_size(&myList); i++){
-        printf("%d \n", *(int*)con_list_get(&myList, i));
-    }
-
     
     
-    free(myList.head);
+    stack_con_push(&my_stack, &a);
+    // stack_con_push(&my_stack, &b);
+    // stack_con_push(&my_stack, &c);
+    // stack_con_push(&my_stack, &d);
+
+    printf("%d \n", NULL==stack_con_pop(&my_stack));
+ 
+    // for (size_t i = 0; i < ; i++){
+    //     printf("%d \n", *(int*)stack_con_pop(&my_stack));
+    // }
+    
     
     
 
