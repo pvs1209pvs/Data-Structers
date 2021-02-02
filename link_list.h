@@ -31,9 +31,9 @@ void link_list_add_node_at(struct Link_List * const link_list, struct List_Node 
 
 void link_list_add_ele_at(struct Link_List * const link_list, void * const ele, const size_t index);
 
-void link_list_dlt_at(struct Link_List * const link_list, const size_t index);
+void * link_list_dlt_at(struct Link_List * const link_list, const size_t index);
 
-void link_list_dlt_ele(struct Link_List * link_list, void * ele, int(compareTo)(const void * const x, const void * const y));
+void * link_list_dlt_ele(struct Link_List * link_list, void * ele, int(compareTo)(const void * const x, const void * const y));
 
 void * link_list_get(const struct Link_List * const link_list, const size_t index);
 
@@ -45,10 +45,10 @@ _Bool link_list_cnts(struct Link_List * const link_list, const void * const ele,
 
 _Bool link_list_is_empty(const struct Link_List * const link_list);
 
-void link_list_free(struct Link_List * link_list);
-
 void ** link_list_to_array(struct Link_List * const link_list);
 
 void link_list_index_check(const struct Link_List * const list, const size_t index);
+
+size_t link_list_size(const struct Link_List * const list);
 
 #endif

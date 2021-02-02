@@ -3,7 +3,7 @@
 #include "link_list.h"
 
 
-void list_link_init(struct Link_List * list) {
+void link_list_init(struct Link_List * list) {
     list->size = 0;
     list->head = NULL;
 }
@@ -30,6 +30,7 @@ void link_list_prepend_ele(struct Link_List * const list, void * const ele) {
     eleNode->next = NULL;
 
     link_list_prepend_node(list, eleNode);
+    
     list->size++;
 
 }
@@ -89,61 +90,47 @@ void link_list_add_ele_at(struct Link_List * const list, void * const ele, const
 }
 
 
-void link_list_dlt_at(struct Link_List * const list, const size_t index) {
+void * link_list_dlt_at(struct Link_List * const list, const size_t index) {
 
     link_list_index_check(list, index);
 
     struct List_Node * p = list->head;
-    struct List_Node * q = list->head;
+    struct List_Node * q = NULL;
 
-    if (index == 0) {
-        list->head = p->next;
-    }
-    else {
-        for (size_t i = 0; i < index; i++) {
-            q = p;
-            p = p->next;
-        }
-        q->next = p->next;
-        free(p);
+    for (size_t i = 0; i < index; i++){
+        q = p;
+        p = p->next;
     }
 
     list->size--;
 
+    return p->value;
+
 }
 
 
-void link_list_dlt_ele(struct Link_List * list, void * ele, int(compareTo)(const void * const x, const void * const y)) {
+void * link_list_dlt_ele(struct Link_List * list, void * ele, int(compareTo)(const void * const x, const void * const y)) {
 
     struct List_Node * p = list->head;
-    struct List_Node * q = list->head;
 
-    if (link_list_index_of(list, ele, compareTo) == 0) {
-        list->head = p->next;
-        list->size--;
-        free(p);
-        printf("%s\n", "yes");
-    } 
-    else {
-
-        for (size_t i = 1; i < list->size; i++) {
-
-            q = p;
-            p = p->next;
-            if (compareTo(ele, p->value) == 0) {
-                q->next = p->next;
-                list->size--;
-                free(p);
-                break;
-            }
+    for (size_t i = 0; i < link_list_size(list); i++){
+        
+        if(compareTo(p->value, ele)==0){
+            return p->value;
         }
 
+        p = p->next;
+
     }
+    
+    return NULL;
 
 }
 
 
 void * link_list_get(const struct Link_List * const list, const size_t index) {
+
+    link_list_index_check(list, index);
 
     struct List_Node * p = list->head;
 
@@ -193,7 +180,7 @@ _Bool link_list_cnts(struct Link_List * const list, const void * const ele, int(
 
     struct List_Node * p = list->head;
 
-    for (size_t i = 0; i < list->size; i++) {
+    for (size_t i = 0; i < link_list_size(list); i++) {
         // if compareTo return 0 then it means the compared elements are the same
         if (compareTo(ele, p->value) == 0) {
             return 1;
@@ -207,22 +194,10 @@ _Bool link_list_cnts(struct Link_List * const list, const void * const ele, int(
 
 
 _Bool link_list_is_empty(const struct Link_List * const list) {
-    return list->size == 0 ? 1 : 0;
+    return link_list_size(list) == 0 ? 1 : 0;
 }
 
 
-void link_list_free(struct Link_List * list) {
-
-    struct List_Node * p = list->head;
-
-    for (size_t i = 0; i < list->size; i++) {
-        free(p);
-        p = p->next;
-    }
-
-    list->size = 0;
-
-}
 
 
 void ** link_list_to_array(struct Link_List * const list) {
@@ -246,7 +221,15 @@ void ** link_list_to_array(struct Link_List * const list) {
 
 
 void link_list_index_check(const struct Link_List * const list, const size_t index) {
-    if (index < 0 || index >= list->size) {
+      if(index < 0 || index >= link_list_size(list)){
+        printf("index %zu out of range\n", index);
         exit(1);
     }
+}
+
+
+size_t link_list_size(const struct Link_List * const list){
+
+    return list->size;
+
 }

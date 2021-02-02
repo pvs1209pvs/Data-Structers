@@ -78,14 +78,3 @@ struct Hash_Table * _hash_table_grow(struct Hash_Table hash_table) {
     return ht;
 
 }
-
-void hash_table_print(struct Hash_Table hash_table) {
-    printf("\n");
-    for (int i = 0; i < hash_table.cpcty; ++i) {
-        if (hash_table.table[i] != NULL)
-            printf("%s\n", (char *) hash_table.table[i]);
-        else
-            printf(".\n");
-    }
-}
-
