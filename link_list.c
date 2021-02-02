@@ -2,13 +2,18 @@
 #include <stdlib.h>
 #include "link_list.h"
 
-
+/**
+ * @param list
+ */
 void link_list_init(struct Link_List * list) {
     list->size = 0;
     list->head = NULL;
 }
 
-
+/**
+ * @param list
+ * @param ele
+ */
 void link_list_prepend_node(struct Link_List * const list, struct List_Node * const ele) {
 
     if (list->size == 0) {
@@ -22,7 +27,10 @@ void link_list_prepend_node(struct Link_List * const list, struct List_Node * co
 
 }
 
-
+/**
+ * @param list
+ * @param ele
+ */
 void link_list_prepend_ele(struct Link_List * const list, void * const ele) {
 
     struct List_Node * eleNode = malloc(sizeof(struct List_Node));
@@ -35,12 +43,18 @@ void link_list_prepend_ele(struct Link_List * const list, void * const ele) {
 
 }
 
-
+/**
+ * @param list
+ * @param ele
+ */
 void link_list_append_node(struct Link_List * const list, struct List_Node * const ele) {
     link_list_add_node_at(list, ele, list->size);
 }
 
-
+/**
+ * @param list
+ * @param ele
+ */
 void link_list_append_ele(struct Link_List * const list, void * const ele) {
 
     struct List_Node * eleNode = malloc(sizeof(struct List_Node));
@@ -51,7 +65,11 @@ void link_list_append_ele(struct Link_List * const list, void * const ele) {
     list->size++;
 }
 
-
+/**
+ * @param list
+ * @param ele
+ * @param index
+ */
 void link_list_add_node_at(struct Link_List * const list, struct List_Node * const ele, const size_t index) {
 
     if (index == 0) {
@@ -75,7 +93,11 @@ void link_list_add_node_at(struct Link_List * const list, struct List_Node * con
 
 }
 
-
+/**
+ * @param list
+ * @param ele
+ * @param index
+ */
 void link_list_add_ele_at(struct Link_List * const list, void * const ele, const size_t index) {
 
     link_list_index_check(list, index);
@@ -89,7 +111,11 @@ void link_list_add_ele_at(struct Link_List * const list, void * const ele, const
 
 }
 
-
+/**
+ * @param list
+ * @param index
+ * @return 
+ */
 void * link_list_dlt_at(struct Link_List * const list, const size_t index) {
 
     link_list_index_check(list, index);
@@ -108,7 +134,12 @@ void * link_list_dlt_at(struct Link_List * const list, const size_t index) {
 
 }
 
-
+/**
+ * @param list
+ * @param ele
+ * @param compareTo
+ * @return 
+ */
 void * link_list_dlt_ele(struct Link_List * list, void * ele, int(compareTo)(const void * const x, const void * const y)) {
 
     struct List_Node * p = list->head;
@@ -127,7 +158,11 @@ void * link_list_dlt_ele(struct Link_List * list, void * ele, int(compareTo)(con
 
 }
 
-
+/**
+ * @param list
+ * @param index
+ * @return 
+ */
 void * link_list_get(const struct Link_List * const list, const size_t index) {
 
     link_list_index_check(list, index);
@@ -142,7 +177,11 @@ void * link_list_get(const struct Link_List * const list, const size_t index) {
 
 }
 
-
+/**
+ * @param list
+ * @param new_value
+ * @param index
+ */
 void link_list_set_at(struct Link_List * const list, void * const new_value, const size_t index) {
 
     link_list_index_check(list, index);
@@ -157,7 +196,12 @@ void link_list_set_at(struct Link_List * const list, void * const new_value, con
 
 }
 
-
+/**
+ * @param list
+ * @param ele
+ * @param compareTo
+ * @return
+ */
 int link_list_index_of(struct Link_List * const list, const void * const ele, int(compareTo)(const void * const x, const void * const y)) {
 
     struct List_Node * p = list->head;
@@ -175,7 +219,12 @@ int link_list_index_of(struct Link_List * const list, const void * const ele, in
 
 }
 
-
+/**
+ * @param list
+ * @param ele
+ * @param compareTo
+ * @return 
+ */
 _Bool link_list_cnts(struct Link_List * const list, const void * const ele, int(compareTo)(const void * const x, const void * const y)) {
 
     struct List_Node * p = list->head;
@@ -192,14 +241,20 @@ _Bool link_list_cnts(struct Link_List * const list, const void * const ele, int(
 
 }
 
-
+/**
+ * @param list
+ * @return 
+ */
 _Bool link_list_is_empty(const struct Link_List * const list) {
     return link_list_size(list) == 0 ? 1 : 0;
 }
 
 
 
-
+/**
+ * @param list
+ * @return
+ */
 void ** link_list_to_array(struct Link_List * const list) {
 
     if (list->size == 0) {
@@ -219,7 +274,10 @@ void ** link_list_to_array(struct Link_List * const list) {
 
 }
 
-
+/**
+ * @param list
+ * @param index
+ */
 void link_list_index_check(const struct Link_List * const list, const size_t index) {
       if(index < 0 || index >= link_list_size(list)){
         printf("index %zu out of range\n", index);
@@ -227,9 +285,10 @@ void link_list_index_check(const struct Link_List * const list, const size_t ind
     }
 }
 
-
+/**
+ * @param list
+ * @return 
+ */
 size_t link_list_size(const struct Link_List * const list){
-
     return list->size;
-
 }
