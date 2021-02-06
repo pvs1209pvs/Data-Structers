@@ -1,0 +1,3 @@
+/home/pvs/Desktop/Data-Structers/build/CMakeFiles/rebuild_cache.dir
+/home/pvs/Desktop/Data-Structers/build/CMakeFiles/Data-Structures.dir
+/home/pvs/Desktop/Data-Structers/build/CMakeFiles/edit_cache.dir
