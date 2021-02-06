@@ -19,29 +19,29 @@ struct Link_List {
 
 void link_list_init(struct Link_List * list);
 
-void link_list_prepend_node(struct Link_List * const link_list, struct List_Node * const ele);
+static void link_list_prepend_node(struct Link_List * const link_list, struct List_Node * const ele);
 
-void link_list_prepend_ele(struct Link_List * const link_list, void * const ele);
+void link_list_prepend(struct Link_List * const link_list, void * const ele);
 
-void link_list_append_node(struct Link_List * const link_list, struct List_Node * const ele);
+static void link_list_append_node(struct Link_List * const link_list, struct List_Node * const ele);
 
-void link_list_append_ele(struct Link_List * const link_list, void * const ele);
+void link_list_append(struct Link_List * const link_list, void * const ele);
 
-void link_list_add_node_at(struct Link_List * const link_list, struct List_Node * const ele, const size_t index);
+static void link_list_add_node_at(struct Link_List * const link_list, struct List_Node * const ele, const size_t index);
 
 void link_list_add_ele_at(struct Link_List * const link_list, void * const ele, const size_t index);
 
 void * link_list_dlt_at(struct Link_List * const link_list, const size_t index);
 
-void * link_list_dlt_ele(struct Link_List * link_list, void * ele, int(compareTo)(const void * const x, const void * const y));
+void * link_list_dlt_ele(struct Link_List * link_list, void * ele, int(compare_to)(const void * const x, const void * const y));
 
 void * link_list_get(const struct Link_List * const link_list, const size_t index);
 
 void link_list_set_at(struct Link_List * const link_list, void * const new_value, const size_t index);
 
-int link_list_index_of(struct Link_List * const link_list, const void * const ele, int(compareTo)(const void * const x, const void * const y));
+int link_list_index_of(struct Link_List * const link_list, const void * const ele, int(compare_to)(const void * const x, const void * const y));
 
-_Bool link_list_cnts(struct Link_List * const link_list, const void * const ele, int(compareTo)(const void * const x, const void * const y));
+_Bool link_list_cnts(struct Link_List * const link_list, const void * const ele, int(compare_to)(const void * const x, const void * const y));
 
 _Bool link_list_is_empty(const struct Link_List * const link_list);
 

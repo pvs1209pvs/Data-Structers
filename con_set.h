@@ -9,9 +9,9 @@ struct Set{
     void **head;    // pointer style dynamic head
 };
 
-void set_con_init(struct Set * set, size_t cpcty);
+void set_con_init(struct Set * array_set, const size_t cpcty);
 
-void set_con_add(struct Set * set, void *ele, int(*compare_to)(const void * const x, const void * const y));
+void set_con_add(struct Set * array_set, void * const ele, int(*compare_to)(const void * const x, const void * const y));
 
 void set_con_dlt_vle(struct Set * set, void * ele, int(*compare_to)(const void * const x, const void * const y));
 

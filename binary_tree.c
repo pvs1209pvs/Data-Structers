@@ -5,23 +5,36 @@
 #include <stdbool.h>
 #include "map.h"
 
+/*
+ * sets and key and value for the struct Binary_Node where left and right and NULL.
+ * k is the key.
+ * v is the value.
+ * return the struct Binary_Node with key equal to k and value equal to v and both the children pointers equal to NULL.
+ */
 struct Binary_Node * binary_tree_init_node(void * k) {
 
     struct Binary_Node * result = malloc(sizeof(struct Binary_Node));
+
     result->key = k;
     result->left = NULL;
     result->right = NULL;
+    
     return result;
 
-} // init_node
+}
 
-void binary_tree_add(struct Binary_Node * tree, struct Binary_Node * ele,
-                     int(compare_to(const void * const x, const void * const y))) {
 
-                       
+/**
+ * Adds ele to the map_tree. Nodes are compared by the comparing function passed.
+ * @param tree Current tree.
+ * @param ele Node to be added.
+ * @param compare_to Dictates how the nodes are compared.
+ * @param size Number of nodes in the tree map.
+ */
+void binary_tree_add(struct Binary_Node * tree, struct Binary_Node * ele, int(compare_to(const void * const x, const void * const y))) {     
 
     if (tree == NULL) { // tree is empty
-        printf("Error: Root node cannot be NULL. Give it a value key-value values before adding elements to the binary tree.");
+        printf("Root node cannot be NULL. Give it a value key-value values before adding elements to the binary tree.\n");
         exit(1);
     } else {
 
@@ -46,24 +59,18 @@ void binary_tree_add(struct Binary_Node * tree, struct Binary_Node * ele,
 
     }
 
-} // add
+} 
 
-struct Binary_Node * binary_tree_min(struct Binary_Node * tree) {
 
-    if (tree->left != NULL) binary_tree_min(tree->left);
-    else return tree;
-
-} // min
-
-struct Binary_Node * binary_tree_max(struct Binary_Node * tree) {
-
-    if (tree->right != NULL) binary_tree_max(tree->right);
-    else return tree;
-
-} // max
-
-struct Binary_Node * binary_tree_del(struct Binary_Node * tree, struct Binary_Node * ele,
-                                     int(compareTo)(const void * const x, const void * const y)) {
+/**
+ * Deletes a node from the tree.
+ * @param tree Current tree.
+ * @param ele Node to be removed.
+ * @param compare_to Dictates how the values are compared.
+ * @param size Number of nodes in the tree.
+ * @param return Deleted node.
+ */
+struct Binary_Node * binary_tree_del(struct Binary_Node * tree, struct Binary_Node * ele, int(compareTo)(const void * const x, const void * const y)) {
 
     if (compareTo(ele->key, tree->key) == 0) {
 
@@ -94,22 +101,35 @@ struct Binary_Node * binary_tree_del(struct Binary_Node * tree, struct Binary_No
     }
 
 
-} // delete
+} 
 
 
-struct Binary_Node *
-binary_tree_contains(struct Binary_Node * tree, struct Binary_Node ele, int(compareTo(const void * const x, const void * const y))) {
+/**
+ * Returns the node with the smallest value.
+ * @param return Node with the smallest value.
+ */
+struct Binary_Node * binary_tree_min(struct Binary_Node * tree) {
 
-    if (compareTo(ele.key, tree->key) < 0 && tree->left != NULL) {
-        binary_tree_contains(tree->left, ele, compareTo);
-    } else if (compareTo(ele.key, tree->key) > 0 && tree->right != NULL) {
-        binary_tree_contains(tree->right, ele, compareTo);
-    } else if (compareTo(ele.key, tree->key) == 0) {
-        return tree;
-    }
+    if (tree->left != NULL) binary_tree_min(tree->left);
+    else return tree;
 
-} // contains
+} 
 
+/**
+ * Returns the node with the largest value.
+ * @return Node with the smallest value.
+ */
+struct Binary_Node * binary_tree_max(struct Binary_Node * tree) {
+
+    return tree->right == NULL ? tree : binary_tree_max(tree->right);
+
+} 
+
+
+/**
+ * @param tree Current tree.
+ * @return Height of the tree.
+ */
 size_t binary_tree_height(struct Binary_Node * tree) {
 
     size_t leftHght, rightHght;
@@ -120,47 +140,40 @@ size_t binary_tree_height(struct Binary_Node * tree) {
 
     return leftHght > rightHght ? leftHght : rightHght;
 
-} // height
+}
 
 
-struct Binary_Node *
-binary_tree_update_node(struct Binary_Node * tree, struct Binary_Node * trgt_node, void * new_value,
-                        int(compare_to)(const void * const x, const void * const y)) {
-
-
-    //printf("check:  %d %d \n", *(int*)tree->value, *(int*)trgt_node->value);
-
+struct Binary_Node * binary_tree_update_node(struct Binary_Node * tree, struct Binary_Node * trgt_node, void * new_value, int(compare_to)(const void * const x, const void * const y)) {
+    
     if (compare_to(tree->key, trgt_node->key) == 0) {
         tree->key = new_value;
     }
 
-    if (tree->left != NULL)
-        binary_tree_update_node(tree->left, trgt_node, new_value, compare_to);
-
-
-    if (tree->right != NULL)
-        binary_tree_update_node(tree->right, trgt_node, new_value, compare_to);
-
-
-}
-
-void binary_tree_inorder_traversal(struct Binary_Node * tree, struct List * list) {
-
-    if(tree == NULL) return;
-
     if (tree->left != NULL){
-        binary_tree_inorder_traversal(tree->left, list);
+        binary_tree_update_node(tree->left, trgt_node, new_value, compare_to);
     }
-
-    con_list_add(list, tree->key);
-
-    //printf("%d\n", *(int *) tree->key);
 
     if (tree->right != NULL){
-        binary_tree_inorder_traversal(tree->right, list);
+        binary_tree_update_node(tree->right, trgt_node, new_value, compare_to);
     }
 
 }
+
+
+// 0 absent
+// 1 present
+struct Binary_Node * binary_tree_contains(struct Binary_Node * tree, struct Binary_Node ele, int(compareTo(const void * const x, const void * const y))) {
+
+    if (compareTo(ele.key, tree->key) < 0 && tree->left != NULL) {
+        binary_tree_contains(tree->left, ele, compareTo);
+    } else if (compareTo(ele.key, tree->key) > 0 && tree->right != NULL) {
+        binary_tree_contains(tree->right, ele, compareTo);
+    } else if (compareTo(ele.key, tree->key) == 0) {
+        return tree;
+    }
+
+}
+
 
 struct List binary_tree_ele_array(struct Binary_Node * tree){
 
@@ -174,6 +187,12 @@ struct List binary_tree_ele_array(struct Binary_Node * tree){
 }
 
 
+/**
+ * Checks if two map_tree are equal.
+ * @param a First tree.
+ * @param b Seond tree.
+ * @return 1 if a and b are equal, else 0. 
+ */
 bool binary_tree_is_equal(struct Binary_Node * a, struct Binary_Node * b, int(compareTo)(void * x, void * y)) {
 
     if (a->left == NULL ^ b->left == NULL || a->right == NULL ^ b->right == NULL) return false;
@@ -185,4 +204,21 @@ bool binary_tree_is_equal(struct Binary_Node * a, struct Binary_Node * b, int(co
 
     return true;
 
-} // is_equal
+} 
+
+
+void binary_tree_inorder_traversal(struct Binary_Node * tree, struct List * list) {
+
+    if(tree == NULL) return;
+
+    if (tree->left != NULL){
+        binary_tree_inorder_traversal(tree->left, list);
+    }
+
+    con_list_add(list, tree->key);
+
+    if (tree->right != NULL){
+        binary_tree_inorder_traversal(tree->right, list);
+    }
+
+}

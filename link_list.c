@@ -14,7 +14,7 @@ void link_list_init(struct Link_List * list) {
  * @param list
  * @param ele
  */
-void link_list_prepend_node(struct Link_List * const list, struct List_Node * const ele) {
+static void link_list_prepend_node(struct Link_List * const list, struct List_Node * const ele) {
 
     if (list->size == 0) {
         list->head = ele;
@@ -31,7 +31,7 @@ void link_list_prepend_node(struct Link_List * const list, struct List_Node * co
  * @param list
  * @param ele
  */
-void link_list_prepend_ele(struct Link_List * const list, void * const ele) {
+void link_list_prepend(struct Link_List * const list, void * const ele) {
 
     struct List_Node * eleNode = malloc(sizeof(struct List_Node));
     eleNode->value = ele;
@@ -47,7 +47,7 @@ void link_list_prepend_ele(struct Link_List * const list, void * const ele) {
  * @param list
  * @param ele
  */
-void link_list_append_node(struct Link_List * const list, struct List_Node * const ele) {
+static void link_list_append_node(struct Link_List * const list, struct List_Node * const ele) {
     link_list_add_node_at(list, ele, list->size);
 }
 
@@ -55,7 +55,7 @@ void link_list_append_node(struct Link_List * const list, struct List_Node * con
  * @param list
  * @param ele
  */
-void link_list_append_ele(struct Link_List * const list, void * const ele) {
+void link_list_append(struct Link_List * const list, void * const ele) {
 
     struct List_Node * eleNode = malloc(sizeof(struct List_Node));
     eleNode->value = ele;
@@ -70,7 +70,7 @@ void link_list_append_ele(struct Link_List * const list, void * const ele) {
  * @param ele
  * @param index
  */
-void link_list_add_node_at(struct Link_List * const list, struct List_Node * const ele, const size_t index) {
+static void link_list_add_node_at(struct Link_List * const list, struct List_Node * const ele, const size_t index) {
 
     if (index == 0) {
         ele->next = list->head;
@@ -140,13 +140,13 @@ void * link_list_dlt_at(struct Link_List * const list, const size_t index) {
  * @param compareTo
  * @return 
  */
-void * link_list_dlt_ele(struct Link_List * list, void * ele, int(compareTo)(const void * const x, const void * const y)) {
+void * link_list_dlt_ele(struct Link_List * list, void * ele, int(compare_to)(const void * const x, const void * const y)) {
 
     struct List_Node * p = list->head;
 
     for (size_t i = 0; i < link_list_size(list); i++){
         
-        if(compareTo(p->value, ele)==0){
+        if(compare_to(p->value, ele)==0){
             return p->value;
         }
 
@@ -202,13 +202,13 @@ void link_list_set_at(struct Link_List * const list, void * const new_value, con
  * @param compareTo
  * @return
  */
-int link_list_index_of(struct Link_List * const list, const void * const ele, int(compareTo)(const void * const x, const void * const y)) {
+int link_list_index_of(struct Link_List * const list, const void * const ele, int(compare_to)(const void * const x, const void * const y)) {
 
     struct List_Node * p = list->head;
     int ele_index = -1;
 
     for (int i = 0; i < list->size; i++) {
-        if (compareTo(ele, p->value) == 0) {
+        if (compare_to(ele, p->value) == 0) {
             ele_index = i;
             break;
         }
@@ -225,13 +225,13 @@ int link_list_index_of(struct Link_List * const list, const void * const ele, in
  * @param compareTo
  * @return 
  */
-_Bool link_list_cnts(struct Link_List * const list, const void * const ele, int(compareTo)(const void * const x, const void * const y)) {
+_Bool link_list_cnts(struct Link_List * const list, const void * const ele, int(compare_to)(const void * const x, const void * const y)) {
 
     struct List_Node * p = list->head;
 
     for (size_t i = 0; i < link_list_size(list); i++) {
         // if compareTo return 0 then it means the compared elements are the same
-        if (compareTo(ele, p->value) == 0) {
+        if (compare_to(ele, p->value) == 0) {
             return 1;
         }
         p = p->next;

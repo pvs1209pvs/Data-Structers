@@ -4,57 +4,61 @@
 #include <stdlib.h>
 #include "con_set.h"
 
-void set_con_init(struct Set * arraySet, size_t cpcty) {
-    arraySet->head = malloc(cpcty*sizeof(void *));
-    arraySet->cpcty = cpcty;
-    arraySet->size = 0;
+void set_con_init(struct Set * array_set, const size_t cpcty) {
+
+    array_set->head = malloc(cpcty*sizeof(void *));
+
+    array_set->cpcty = cpcty;
+    array_set->size = 0;
+    
 }
 
-void set_con_add(struct Set * arraySet, void * ele, int(* compareTo)(const void * const x, const void * const y)) {
+void set_con_add(struct Set * array_set, void * const ele, int(* compare_to)(const void * const x, const void * const y)) {
 
-    if (arraySet->size == arraySet->cpcty) set_con_grow(arraySet);
+    if (array_set->size == array_set->cpcty) {
+        set_con_grow(array_set);
+    }
 
-    if (arraySet->size == 0) {
-        arraySet->head[0] = ele;
-        arraySet->size++;
+    if (array_set->size == 0) {
+        array_set->head[0] = ele;
+        array_set->size++;
     } else {
-        if (set_con_cntns(arraySet, ele, compareTo) != 1) {
-            arraySet->head[arraySet->size] = ele;
-            arraySet->size++;
+        if (set_con_cntns(array_set, ele, compare_to) != 1) {
+            array_set->head[array_set->size] = ele;
+            array_set->size++;
         }
     }
 
-
 }
 
-void set_con_dlt_vle(struct Set * arraySet, void * ele, int(* compareTo)(const void * const x, const void * const y)) {
+void set_con_dlt_vle(struct Set * array_set, void * ele, int(* compareTo)(const void * const x, const void * const y)) {
 
     int i = 0;
 
-    for (i = 0; i < arraySet->size; ++i) {
-        if (compareTo(arraySet->head[i], ele) == 0) {
-            arraySet->head[i] = NULL;
+    for (i = 0; i < array_set->size; ++i) {
+        if (compareTo(array_set->head[i], ele) == 0) {
+            array_set->head[i] = NULL;
             break;
         }
     }
 
-    for (int j = i; i < arraySet->size - 1; ++i)
-        arraySet->head[i] = arraySet->head[i + 1];
+    for (int j = i; i < array_set->size - 1; ++i)
+        array_set->head[i] = array_set->head[i + 1];
 
-    arraySet->size--;
+    array_set->size--;
 }
 
-void set_con_dlt_indx(struct Set * arraySet, int index) {
+void set_con_dlt_indx(struct Set * array_set, int index) {
 
-    //free(arraySet->head[index]);
+    //free(array_set->head[index]);
 
-    for (int i = index; i < set_con_size(arraySet) - 1; ++i) {
-        arraySet->head[i] = arraySet->head[i + 1];
+    for (int i = index; i < set_con_size(array_set) - 1; ++i) {
+        array_set->head[i] = array_set->head[i + 1];
     }
-    arraySet->head[set_con_size(arraySet) - 1] = NULL;
+    array_set->head[set_con_size(array_set) - 1] = NULL;
 
 
-    arraySet->size--;
+    array_set->size--;
 
 }
 
@@ -76,12 +80,12 @@ struct Set * set_con_union(struct Set * set_one, struct Set * set_two, int(* com
 
 }
 
-int set_con_cntns(struct Set * arraySet, void * ele, int(* compareTo)(const void * const x, const void * const y)) {
+int set_con_cntns(struct Set * array_set, void * ele, int(* compareTo)(const void * const x, const void * const y)) {
 
     _Bool bool = 0;
 
-    for (int i = 0; i < arraySet->size; ++i) {
-        if (compareTo(arraySet->head[i], ele) == 0) {
+    for (int i = 0; i < array_set->size; ++i) {
+        if (compareTo(array_set->head[i], ele) == 0) {
             bool = 1;
             break;
         }
@@ -91,17 +95,17 @@ int set_con_cntns(struct Set * arraySet, void * ele, int(* compareTo)(const void
 
 }
 
-size_t set_con_size(struct Set * arraySet) {
-    return arraySet->size;
+size_t set_con_size(struct Set * array_set) {
+    return array_set->size;
 }
 
 _Bool set_isEmpty(struct Set * arrayset) {
     return arrayset->size == 0;
 }
 
-void set_con_grow(struct Set * arraySet) {
-    arraySet->cpcty = arraySet->cpcty*2;
-    arraySet->head = realloc(arraySet->head, arraySet->cpcty*sizeof(void *));
+void set_con_grow(struct Set * array_set) {
+    array_set->cpcty = array_set->cpcty*2;
+    array_set->head = realloc(array_set->head, array_set->cpcty*sizeof(void *));
 }
 
 void set_con_free(struct Set * set) {

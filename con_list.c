@@ -8,9 +8,12 @@
  * @param cpty How many elements list can hold.
 */
 void con_list_init(struct List *list, const size_t cpcty) {
+
   list->head = malloc(cpcty * sizeof(void*));
+
   list->cpcty = cpcty;
   list->size = 0;
+
 }
 
 
@@ -20,8 +23,13 @@ void con_list_init(struct List *list, const size_t cpcty) {
  * @param ele Address of the elements that the list will be storing.
 */
 void con_list_add(struct List *list, void * const ele) {
-  if (list->size == list->cpcty) con_list_grow(list);
+  
+  if (list->size == list->cpcty) {
+    con_list_grow(list);
+  }
+
   list->head[list->size++] = ele;
+
 }
 
 
@@ -30,7 +38,7 @@ void con_list_add(struct List *list, void * const ele) {
  * @param list List from whic the element will be deleted.
  * @parem i Index of the element that has to be deleted.
 */
-void * con_list_dlt_indx(struct List * const list, const size_t i) {
+void * con_list_dlt_at(struct List * const list, const size_t i) {
 
   void * r = list->head[i];
 
@@ -71,10 +79,24 @@ size_t con_list_size(const struct List * const list) {
 void con_list_clr(struct List * const list) {
 
   for (int i = 0; i < list->size; ++i){
-    con_list_dlt_indx(list, i);
+    con_list_dlt_at(list, i);
   }
 
   list->size = 0;
+
+}
+
+/**
+ * @param list
+ * @return NULL if the shrink was unsucessful.
+ */
+void * con_list_shrink(struct List * list){
+
+  list->head = realloc(list->head, sizeof(void*) * list->size);
+
+  list->cpcty = list->size;
+  
+  return list->head;
 
 }
 
@@ -83,7 +105,7 @@ void con_list_clr(struct List * const list) {
  * Adds the element at the valid index.
  * @param list List in which element is to be added.
  * @param i Index at which the element has to be added.
- * @param ele: ele that is be added at the index i.
+ * @param ele Element that is be added at the index i.
 */
 void con_list_set_at(const struct List * const list, size_t i, void * const ele) {
   list->head[i] = ele;
@@ -97,11 +119,16 @@ void con_list_set_at(const struct List * const list, size_t i, void * const ele)
  * @param compareTo function poninter that dictates how the elements should be compared.
  * @return 1 is the element is present in the list, else 0.
 */
-_Bool con_list_cntns(struct List *list, void *ele, int(compareTo)(const void * const x, const void * const y)) {
+_Bool con_list_cntns(struct List * const list, void * const ele, int(compare_to)(const void * const x, const void * const y)) {
+  
   for (int i = 0; i < list->size; ++i) {
-    if (compareTo(list->head[i], ele) == 0) return 1;
+    if (compare_to(list->head[i], ele) == 0) {
+      return 1;
+    }
   }
+
   return 0;
+
 }
 
 
@@ -110,7 +137,7 @@ _Bool con_list_cntns(struct List *list, void *ele, int(compareTo)(const void * c
  * @param list List that has to be checked.
  * @return 1 is the list is empty, else 0.
 */
-_Bool con_list_isEmpty(const struct List * const list) {
+_Bool con_list_is_empty(const struct List * const list) {
   return list->size == 0;
 }
 
@@ -120,15 +147,13 @@ _Bool con_list_isEmpty(const struct List * const list) {
  * @param list List whose capacity has to be doubled.
 */
 void con_list_grow(struct List *list) {
+
   list->cpcty = 2 * list->cpcty;
   list->head = realloc(list->head, list->cpcty * sizeof(void*));
-}
 
+  if(list->head == NULL){
+    printf("con_list grow failed.\n");
+    exit(1);
+  }
 
-/**
- * Removes list from the heap.
- * @param list List that needs to be freeed.
-*/
-void con_list_free(struct List *list) {
-  free(list->head);
 }
