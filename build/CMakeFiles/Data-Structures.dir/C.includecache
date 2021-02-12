@@ -8,17 +8,9 @@
 
 ../List/con_list.h
 
-../Map/binary_tree.h
+../Set/hashtable.h
 stddef.h
 -
-stdbool.h
--
-con_list.h
-../Map/con_list.h
-
-../Set/map.h
-binary_tree.h
-../Set/binary_tree.h
 
 /home/pvs/Desktop/Data-Structers/List/con_list.c
 malloc.h
@@ -49,8 +41,6 @@ string.h
 -
 stdbool.h
 -
-map.h
-/home/pvs/Desktop/Data-Structers/Map/map.h
 
 /home/pvs/Desktop/Data-Structers/Map/binary_tree.h
 stddef.h
@@ -59,8 +49,6 @@ stdbool.h
 -
 con_list.h
 /home/pvs/Desktop/Data-Structers/Map/con_list.h
-
-/home/pvs/Desktop/Data-Structers/Map/tree_priority_queue.c
 
 /home/pvs/Desktop/Data-Structers/Set/con_set.c
 stdio.h
@@ -83,24 +71,16 @@ stdlib.h
 -
 stdio.h
 -
+string.h
+-
+stdbool.h
+-
 hashtable.h
 /home/pvs/Desktop/Data-Structers/Set/hashtable.h
 
 /home/pvs/Desktop/Data-Structers/Set/hashtable.h
 stddef.h
 -
-
-/home/pvs/Desktop/Data-Structers/Set/map.c
-malloc.h
--
-map.h
-/home/pvs/Desktop/Data-Structers/Set/map.h
-con_list.h
-/home/pvs/Desktop/Data-Structers/Set/con_list.h
-
-/home/pvs/Desktop/Data-Structers/Set/map.h
-binary_tree.h
-/home/pvs/Desktop/Data-Structers/Set/binary_tree.h
 
 /home/pvs/Desktop/Data-Structers/Stack/con_stack.c
 malloc.h
@@ -123,6 +103,6 @@ string.h
 -
 stdbool.h
 -
-con_list.h
-/home/pvs/Desktop/Data-Structers/Test/con_list.h
+hashtable.h
+/home/pvs/Desktop/Data-Structers/Test/hashtable.h
 

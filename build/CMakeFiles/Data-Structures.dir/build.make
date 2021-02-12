@@ -129,33 +129,9 @@ CMakeFiles/Data-Structures.dir/Map/binary_tree.c.o.provides: CMakeFiles/Data-Str
 CMakeFiles/Data-Structures.dir/Map/binary_tree.c.o.provides.build: CMakeFiles/Data-Structures.dir/Map/binary_tree.c.o
 
 
-CMakeFiles/Data-Structures.dir/Map/tree_priority_queue.c.o: CMakeFiles/Data-Structures.dir/flags.make
-CMakeFiles/Data-Structures.dir/Map/tree_priority_queue.c.o: ../Map/tree_priority_queue.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pvs/Desktop/Data-Structers/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/Data-Structures.dir/Map/tree_priority_queue.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Data-Structures.dir/Map/tree_priority_queue.c.o   -c /home/pvs/Desktop/Data-Structers/Map/tree_priority_queue.c
-
-CMakeFiles/Data-Structures.dir/Map/tree_priority_queue.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Data-Structures.dir/Map/tree_priority_queue.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pvs/Desktop/Data-Structers/Map/tree_priority_queue.c > CMakeFiles/Data-Structures.dir/Map/tree_priority_queue.c.i
-
-CMakeFiles/Data-Structures.dir/Map/tree_priority_queue.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Data-Structures.dir/Map/tree_priority_queue.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pvs/Desktop/Data-Structers/Map/tree_priority_queue.c -o CMakeFiles/Data-Structures.dir/Map/tree_priority_queue.c.s
-
-CMakeFiles/Data-Structures.dir/Map/tree_priority_queue.c.o.requires:
-
-.PHONY : CMakeFiles/Data-Structures.dir/Map/tree_priority_queue.c.o.requires
-
-CMakeFiles/Data-Structures.dir/Map/tree_priority_queue.c.o.provides: CMakeFiles/Data-Structures.dir/Map/tree_priority_queue.c.o.requires
-	$(MAKE) -f CMakeFiles/Data-Structures.dir/build.make CMakeFiles/Data-Structures.dir/Map/tree_priority_queue.c.o.provides.build
-.PHONY : CMakeFiles/Data-Structures.dir/Map/tree_priority_queue.c.o.provides
-
-CMakeFiles/Data-Structures.dir/Map/tree_priority_queue.c.o.provides.build: CMakeFiles/Data-Structures.dir/Map/tree_priority_queue.c.o
-
-
 CMakeFiles/Data-Structures.dir/Set/con_set.c.o: CMakeFiles/Data-Structures.dir/flags.make
 CMakeFiles/Data-Structures.dir/Set/con_set.c.o: ../Set/con_set.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pvs/Desktop/Data-Structers/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/Data-Structures.dir/Set/con_set.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pvs/Desktop/Data-Structers/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/Data-Structures.dir/Set/con_set.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Data-Structures.dir/Set/con_set.c.o   -c /home/pvs/Desktop/Data-Structers/Set/con_set.c
 
 CMakeFiles/Data-Structures.dir/Set/con_set.c.i: cmake_force
@@ -179,7 +155,7 @@ CMakeFiles/Data-Structures.dir/Set/con_set.c.o.provides.build: CMakeFiles/Data-S
 
 CMakeFiles/Data-Structures.dir/Set/hashtable.c.o: CMakeFiles/Data-Structures.dir/flags.make
 CMakeFiles/Data-Structures.dir/Set/hashtable.c.o: ../Set/hashtable.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pvs/Desktop/Data-Structers/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/Data-Structures.dir/Set/hashtable.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pvs/Desktop/Data-Structers/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/Data-Structures.dir/Set/hashtable.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Data-Structures.dir/Set/hashtable.c.o   -c /home/pvs/Desktop/Data-Structers/Set/hashtable.c
 
 CMakeFiles/Data-Structures.dir/Set/hashtable.c.i: cmake_force
@@ -201,33 +177,9 @@ CMakeFiles/Data-Structures.dir/Set/hashtable.c.o.provides: CMakeFiles/Data-Struc
 CMakeFiles/Data-Structures.dir/Set/hashtable.c.o.provides.build: CMakeFiles/Data-Structures.dir/Set/hashtable.c.o
 
 
-CMakeFiles/Data-Structures.dir/Set/map.c.o: CMakeFiles/Data-Structures.dir/flags.make
-CMakeFiles/Data-Structures.dir/Set/map.c.o: ../Set/map.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pvs/Desktop/Data-Structers/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/Data-Structures.dir/Set/map.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Data-Structures.dir/Set/map.c.o   -c /home/pvs/Desktop/Data-Structers/Set/map.c
-
-CMakeFiles/Data-Structures.dir/Set/map.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Data-Structures.dir/Set/map.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pvs/Desktop/Data-Structers/Set/map.c > CMakeFiles/Data-Structures.dir/Set/map.c.i
-
-CMakeFiles/Data-Structures.dir/Set/map.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Data-Structures.dir/Set/map.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pvs/Desktop/Data-Structers/Set/map.c -o CMakeFiles/Data-Structures.dir/Set/map.c.s
-
-CMakeFiles/Data-Structures.dir/Set/map.c.o.requires:
-
-.PHONY : CMakeFiles/Data-Structures.dir/Set/map.c.o.requires
-
-CMakeFiles/Data-Structures.dir/Set/map.c.o.provides: CMakeFiles/Data-Structures.dir/Set/map.c.o.requires
-	$(MAKE) -f CMakeFiles/Data-Structures.dir/build.make CMakeFiles/Data-Structures.dir/Set/map.c.o.provides.build
-.PHONY : CMakeFiles/Data-Structures.dir/Set/map.c.o.provides
-
-CMakeFiles/Data-Structures.dir/Set/map.c.o.provides.build: CMakeFiles/Data-Structures.dir/Set/map.c.o
-
-
 CMakeFiles/Data-Structures.dir/Stack/con_stack.c.o: CMakeFiles/Data-Structures.dir/flags.make
 CMakeFiles/Data-Structures.dir/Stack/con_stack.c.o: ../Stack/con_stack.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pvs/Desktop/Data-Structers/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/Data-Structures.dir/Stack/con_stack.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pvs/Desktop/Data-Structers/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/Data-Structures.dir/Stack/con_stack.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Data-Structures.dir/Stack/con_stack.c.o   -c /home/pvs/Desktop/Data-Structers/Stack/con_stack.c
 
 CMakeFiles/Data-Structures.dir/Stack/con_stack.c.i: cmake_force
@@ -251,7 +203,7 @@ CMakeFiles/Data-Structures.dir/Stack/con_stack.c.o.provides.build: CMakeFiles/Da
 
 CMakeFiles/Data-Structures.dir/Test/test.c.o: CMakeFiles/Data-Structures.dir/flags.make
 CMakeFiles/Data-Structures.dir/Test/test.c.o: ../Test/test.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pvs/Desktop/Data-Structers/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/Data-Structures.dir/Test/test.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pvs/Desktop/Data-Structers/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/Data-Structures.dir/Test/test.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Data-Structures.dir/Test/test.c.o   -c /home/pvs/Desktop/Data-Structers/Test/test.c
 
 CMakeFiles/Data-Structures.dir/Test/test.c.i: cmake_force
@@ -278,10 +230,8 @@ Data__Structures_OBJECTS = \
 "CMakeFiles/Data-Structures.dir/List/con_list.c.o" \
 "CMakeFiles/Data-Structures.dir/List/link_list.c.o" \
 "CMakeFiles/Data-Structures.dir/Map/binary_tree.c.o" \
-"CMakeFiles/Data-Structures.dir/Map/tree_priority_queue.c.o" \
 "CMakeFiles/Data-Structures.dir/Set/con_set.c.o" \
 "CMakeFiles/Data-Structures.dir/Set/hashtable.c.o" \
-"CMakeFiles/Data-Structures.dir/Set/map.c.o" \
 "CMakeFiles/Data-Structures.dir/Stack/con_stack.c.o" \
 "CMakeFiles/Data-Structures.dir/Test/test.c.o"
 
@@ -291,15 +241,13 @@ Data__Structures_EXTERNAL_OBJECTS =
 Data-Structures: CMakeFiles/Data-Structures.dir/List/con_list.c.o
 Data-Structures: CMakeFiles/Data-Structures.dir/List/link_list.c.o
 Data-Structures: CMakeFiles/Data-Structures.dir/Map/binary_tree.c.o
-Data-Structures: CMakeFiles/Data-Structures.dir/Map/tree_priority_queue.c.o
 Data-Structures: CMakeFiles/Data-Structures.dir/Set/con_set.c.o
 Data-Structures: CMakeFiles/Data-Structures.dir/Set/hashtable.c.o
-Data-Structures: CMakeFiles/Data-Structures.dir/Set/map.c.o
 Data-Structures: CMakeFiles/Data-Structures.dir/Stack/con_stack.c.o
 Data-Structures: CMakeFiles/Data-Structures.dir/Test/test.c.o
 Data-Structures: CMakeFiles/Data-Structures.dir/build.make
 Data-Structures: CMakeFiles/Data-Structures.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pvs/Desktop/Data-Structers/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking C executable Data-Structures"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pvs/Desktop/Data-Structers/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking C executable Data-Structures"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Data-Structures.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -310,10 +258,8 @@ CMakeFiles/Data-Structures.dir/build: Data-Structures
 CMakeFiles/Data-Structures.dir/requires: CMakeFiles/Data-Structures.dir/List/con_list.c.o.requires
 CMakeFiles/Data-Structures.dir/requires: CMakeFiles/Data-Structures.dir/List/link_list.c.o.requires
 CMakeFiles/Data-Structures.dir/requires: CMakeFiles/Data-Structures.dir/Map/binary_tree.c.o.requires
-CMakeFiles/Data-Structures.dir/requires: CMakeFiles/Data-Structures.dir/Map/tree_priority_queue.c.o.requires
 CMakeFiles/Data-Structures.dir/requires: CMakeFiles/Data-Structures.dir/Set/con_set.c.o.requires
 CMakeFiles/Data-Structures.dir/requires: CMakeFiles/Data-Structures.dir/Set/hashtable.c.o.requires
-CMakeFiles/Data-Structures.dir/requires: CMakeFiles/Data-Structures.dir/Set/map.c.o.requires
 CMakeFiles/Data-Structures.dir/requires: CMakeFiles/Data-Structures.dir/Stack/con_stack.c.o.requires
 CMakeFiles/Data-Structures.dir/requires: CMakeFiles/Data-Structures.dir/Test/test.c.o.requires
 

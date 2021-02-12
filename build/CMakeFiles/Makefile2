@@ -66,7 +66,7 @@ CMAKE_BINARY_DIR = /home/pvs/Desktop/Data-Structers/build
 CMakeFiles/Data-Structures.dir/all:
 	$(MAKE) -f CMakeFiles/Data-Structures.dir/build.make CMakeFiles/Data-Structures.dir/depend
 	$(MAKE) -f CMakeFiles/Data-Structures.dir/build.make CMakeFiles/Data-Structures.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pvs/Desktop/Data-Structers/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10 "Built target Data-Structures"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pvs/Desktop/Data-Structers/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8 "Built target Data-Structures"
 .PHONY : CMakeFiles/Data-Structures.dir/all
 
 # Include target in all.
@@ -76,7 +76,7 @@ all: CMakeFiles/Data-Structures.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Data-Structures.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pvs/Desktop/Data-Structers/build/CMakeFiles 10
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pvs/Desktop/Data-Structers/build/CMakeFiles 8
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Data-Structures.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pvs/Desktop/Data-Structers/build/CMakeFiles 0
 .PHONY : CMakeFiles/Data-Structures.dir/rule

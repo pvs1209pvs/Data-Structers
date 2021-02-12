@@ -4,36 +4,17 @@
 #include<stddef.h>
 
 struct Hash_Table {
-    void ** table;
+    void ** arr;
     size_t size;
     size_t cpcty;
 };
 
-void hash_table_init
-    (struct Hash_Table * hash_table, 
-    size_t cpcty);
+void hash_table_init(struct Hash_Table * hash_table, const size_t cpcty);
 
+_Bool hash_table_insert(struct Hash_Table * hash_table, void * const ele, size_t (hash_func)(const void * const h));
 
-void _hash_table_add
-    (struct Hash_Table * hash_table, 
-    void * ele, 
-    size_t (hash_func)(const void * const h, size_t));
+void * hash_table_remove(struct Hash_Table * hash_table, void * ele, size_t (hash_func(const void * const h)), int(compare)(const void * const x, const void * const y));
 
-
-void hash_table_insert
-    (struct Hash_Table * hash_table, 
-    void * ele, 
-    size_t (hash_func)(const void * const h, size_t s));
-
-
-void hash_table_remove
-    (struct Hash_Table * hash_table, 
-    void * ele, 
-    size_t (hash_func(const void * const h, size_t s)),
-    int(compare)(const void * const x, const void * const y));
-
-struct Hash_Table * _hash_table_grow
-    (struct Hash_Table hashTable);
-
+static void hash_table_grow(struct Hash_Table * hashTable);
 
 #endif //C_DS_HASTTABLE_H

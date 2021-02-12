@@ -148,7 +148,7 @@ _Bool con_list_is_empty(const struct List * const list) {
 */
 void con_list_grow(struct List *list) {
 
-  list->cpcty = 2 * list->cpcty;
+  list->cpcty *= 2;
   list->head = realloc(list->head, list->cpcty * sizeof(void*));
 
   if(list->head == NULL){

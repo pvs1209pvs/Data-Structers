@@ -204,33 +204,6 @@ Map/binary_tree.c.s:
 	$(MAKE) -f CMakeFiles/Data-Structures.dir/build.make CMakeFiles/Data-Structures.dir/Map/binary_tree.c.s
 .PHONY : Map/binary_tree.c.s
 
-Map/tree_priority_queue.o: Map/tree_priority_queue.c.o
-
-.PHONY : Map/tree_priority_queue.o
-
-# target to build an object file
-Map/tree_priority_queue.c.o:
-	$(MAKE) -f CMakeFiles/Data-Structures.dir/build.make CMakeFiles/Data-Structures.dir/Map/tree_priority_queue.c.o
-.PHONY : Map/tree_priority_queue.c.o
-
-Map/tree_priority_queue.i: Map/tree_priority_queue.c.i
-
-.PHONY : Map/tree_priority_queue.i
-
-# target to preprocess a source file
-Map/tree_priority_queue.c.i:
-	$(MAKE) -f CMakeFiles/Data-Structures.dir/build.make CMakeFiles/Data-Structures.dir/Map/tree_priority_queue.c.i
-.PHONY : Map/tree_priority_queue.c.i
-
-Map/tree_priority_queue.s: Map/tree_priority_queue.c.s
-
-.PHONY : Map/tree_priority_queue.s
-
-# target to generate assembly for a file
-Map/tree_priority_queue.c.s:
-	$(MAKE) -f CMakeFiles/Data-Structures.dir/build.make CMakeFiles/Data-Structures.dir/Map/tree_priority_queue.c.s
-.PHONY : Map/tree_priority_queue.c.s
-
 Set/con_set.o: Set/con_set.c.o
 
 .PHONY : Set/con_set.o
@@ -284,33 +257,6 @@ Set/hashtable.s: Set/hashtable.c.s
 Set/hashtable.c.s:
 	$(MAKE) -f CMakeFiles/Data-Structures.dir/build.make CMakeFiles/Data-Structures.dir/Set/hashtable.c.s
 .PHONY : Set/hashtable.c.s
-
-Set/map.o: Set/map.c.o
-
-.PHONY : Set/map.o
-
-# target to build an object file
-Set/map.c.o:
-	$(MAKE) -f CMakeFiles/Data-Structures.dir/build.make CMakeFiles/Data-Structures.dir/Set/map.c.o
-.PHONY : Set/map.c.o
-
-Set/map.i: Set/map.c.i
-
-.PHONY : Set/map.i
-
-# target to preprocess a source file
-Set/map.c.i:
-	$(MAKE) -f CMakeFiles/Data-Structures.dir/build.make CMakeFiles/Data-Structures.dir/Set/map.c.i
-.PHONY : Set/map.c.i
-
-Set/map.s: Set/map.c.s
-
-.PHONY : Set/map.s
-
-# target to generate assembly for a file
-Set/map.c.s:
-	$(MAKE) -f CMakeFiles/Data-Structures.dir/build.make CMakeFiles/Data-Structures.dir/Set/map.c.s
-.PHONY : Set/map.c.s
 
 Stack/con_stack.o: Stack/con_stack.c.o
 
@@ -384,18 +330,12 @@ help:
 	@echo "... Map/binary_tree.o"
 	@echo "... Map/binary_tree.i"
 	@echo "... Map/binary_tree.s"
-	@echo "... Map/tree_priority_queue.o"
-	@echo "... Map/tree_priority_queue.i"
-	@echo "... Map/tree_priority_queue.s"
 	@echo "... Set/con_set.o"
 	@echo "... Set/con_set.i"
 	@echo "... Set/con_set.s"
 	@echo "... Set/hashtable.o"
 	@echo "... Set/hashtable.i"
 	@echo "... Set/hashtable.s"
-	@echo "... Set/map.o"
-	@echo "... Set/map.i"
-	@echo "... Set/map.s"
 	@echo "... Stack/con_stack.o"
 	@echo "... Stack/con_stack.i"
 	@echo "... Stack/con_stack.s"

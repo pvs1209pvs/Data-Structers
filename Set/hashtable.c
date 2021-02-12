@@ -1,80 +1,90 @@
-#include<stdlib.h>
-#include<stdio.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h> 
+#include <stdbool.h>
 #include "hashtable.h"
 
-void hash_table_init(struct Hash_Table * hash_table, size_t cpcty) {
-    hash_table->table = calloc(cpcty, sizeof(void *));
-    hash_table->cpcty = cpcty;
-    hash_table->size = 0;
+
+/**
+ * @param table
+ * @param cpcty
+ */
+void hash_table_init(struct Hash_Table * table, const size_t cpcty) {
+
+    table->arr = calloc(cpcty, sizeof(void *));
+    table->cpcty = cpcty;
+    table->size = 0;
+
 }
 
-void _hash_table_add(struct Hash_Table * hash_table, void * ele, size_t (hash_func)(const void * const h, size_t s)) {
 
-    size_t index = hash_func(ele, hash_table->cpcty);
+/**
+ * @param table
+ * @param ele
+ * @param hash_func
+ * @return 
+ */
+_Bool hash_table_insert(struct Hash_Table * table, void * const ele, size_t (hash_func)(const void * const h)){
 
+    if(table->size > 0 && table->size == table->cpcty ) {
+        hash_table_grow(table);
+    }
 
-    if (hash_table->table[index] == NULL) {
-        hash_table->table[index] = ele;
-    } else {
-        for (size_t i = index + 1; i < hash_table->cpcty && i != index; i = (i + 1)%hash_table->cpcty) {
-            if (hash_table->table[i] == NULL) {
-                hash_table->table[i] = ele;
-                break;
-            }
+    size_t index = hash_func(ele)%table->cpcty;
+
+    for (size_t i = index; i != index-1; i = (i + 1)%table->cpcty) {
+        if (table->arr[i] == NULL) {
+            table->arr[i] = ele;
+            ++table->size;
+            return true;
         }
     }
 
-    hash_table->size++;
-
-}
-
-void hash_table_insert(struct Hash_Table * hash_table, void * ele, size_t (hash_func)(const void * const h, size_t s)) {
-
-    if ((float)hash_table->size/hash_table->cpcty >= 0.7) {
-
-        struct Hash_Table * ht = _hash_table_grow(*hash_table);
-
-        for (int i = 0; i < hash_table->cpcty; ++i) {
-            if (hash_table->table[i] != NULL) {
-                _hash_table_add(ht, hash_table->table[i], hash_func);
-            }
-        }
-
-        free(hash_table->table);
-        *hash_table = *ht;
-
-        _hash_table_add(hash_table, ele, hash_func);
-
-    } else {
-        _hash_table_add(hash_table, ele, hash_func);
-    }
+    return false;
 
 }
 
 
-void hash_table_remove(struct Hash_Table * hash_table, void * ele, size_t (hash_func(const void * const h, size_t s)),
-                       int(compare)(const void * const x, const void * const y)) {
+/**
+ * @param table
+ * @param ele
+ * @param hash_func
+ * @param compare
+ * @return 
+ */
+void * hash_table_remove(struct Hash_Table * table, void * ele, size_t (hash_func(const void * const h)), int(compare)(const void * const x, const void * const y)) {
 
-    size_t index = hash_func(ele, hash_table->cpcty);
+    size_t index = hash_func(ele)%table->cpcty;
 
-    if (compare(hash_table->table[index], ele) == 0) {
-        hash_table->table[index] = NULL;
-    } else {
-        for (size_t i = index + 1; i < hash_table->cpcty && i != index; i = (i + 1)%hash_table->cpcty) {
-            if (compare(hash_table->table[i], ele) == 0) {
-                free(hash_table->table[i]);
-                hash_table->table[i] = NULL;
-                break;
-            }
+    for (size_t i = index; i != index-1; i = (i + 1)%table->cpcty){
+        if(table->arr[i] != NULL && compare(table->arr[i], ele)==0){
+            void * value = malloc(sizeof(void*));
+            memcpy(value, ele, sizeof(void*));
+            table->arr[i] = NULL;
+            return value;
         }
     }
 
+    return NULL;
+    
 }
 
-struct Hash_Table * _hash_table_grow(struct Hash_Table hash_table) {
 
-    struct Hash_Table * ht = malloc(sizeof(struct Hash_Table));
-    hash_table_init(ht, hash_table.cpcty*2);
-    return ht;
+/**
+ * @param table
+ */
+static void hash_table_grow(struct Hash_Table * table) {
+
+    table->cpcty *= 2; 
+    table->arr = realloc(table->arr, sizeof(void*)*table->cpcty);
+
+    if(table->arr == NULL){
+        printf("hash table grow failed.\n");
+        exit(1);
+    }
+
+    for (size_t i = table->cpcty/2; i < table->cpcty; ++i){
+        table->arr[i] = NULL;
+    }
 
 }
