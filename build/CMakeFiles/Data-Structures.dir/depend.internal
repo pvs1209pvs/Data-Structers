@@ -21,5 +21,7 @@ CMakeFiles/Data-Structures.dir/Stack/con_stack.c.o
  /home/pvs/Desktop/Data-Structers/Stack/con_stack.c
  /home/pvs/Desktop/Data-Structers/Stack/con_stack.h
 CMakeFiles/Data-Structures.dir/Test/test.c.o
+ ../List/con_list.h
+ ../Map/binary_tree.h
  ../Set/hashtable.h
  /home/pvs/Desktop/Data-Structers/Test/test.c

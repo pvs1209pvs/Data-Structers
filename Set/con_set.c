@@ -7,7 +7,6 @@
 void set_con_init(struct Set * array_set, const size_t cpcty) {
 
     array_set->head = malloc(cpcty*sizeof(void *));
-
     array_set->cpcty = cpcty;
     array_set->size = 0;
     

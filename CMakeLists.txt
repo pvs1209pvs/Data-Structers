@@ -5,6 +5,7 @@ project(Data-Structures)
 set(CMAKE_C_STANDARD 99)
 
 set(CMAKE_C_FLAGS "-g")
+set(CMAKE_C_FLAGS "-Ofast")
 
 include_directories(List Map Set Stack Test)
 

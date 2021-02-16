@@ -170,17 +170,17 @@ struct Binary_Node * binary_tree_max(struct Binary_Node * tree) {
 
 // // 0 absent
 // // 1 present
-// struct Binary_Node * binary_tree_contains(struct Binary_Node * tree, struct Binary_Node ele, int(compareTo(const void * const x, const void * const y))) {
+struct Binary_Node * binary_tree_contains(struct Binary_Node * tree, struct Binary_Node ele, int(compareTo(const void * const x, const void * const y))) {
 
-//     if (compareTo(ele.key, tree->key) < 0 && tree->left != NULL) {
-//         binary_tree_contains(tree->left, ele, compareTo);
-//     } else if (compareTo(ele.key, tree->key) > 0 && tree->right != NULL) {
-//         binary_tree_contains(tree->right, ele, compareTo);
-//     } else if (compareTo(ele.key, tree->key) == 0) {
-//         return tree;
-//     }
+    if (compareTo(ele.key, tree->key) < 0 && tree->left != NULL) {
+        binary_tree_contains(tree->left, ele, compareTo);
+    } else if (compareTo(ele.key, tree->key) > 0 && tree->right != NULL) {
+        binary_tree_contains(tree->right, ele, compareTo);
+    } else if (compareTo(ele.key, tree->key) == 0) {
+        return tree;
+    }
 
-// }
+}
 
 
 // struct List binary_tree_ele_array(struct Binary_Node * tree){

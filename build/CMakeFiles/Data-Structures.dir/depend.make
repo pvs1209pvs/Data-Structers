@@ -20,6 +20,8 @@ CMakeFiles/Data-Structures.dir/Set/hashtable.c.o: ../Set/hashtable.h
 CMakeFiles/Data-Structures.dir/Stack/con_stack.c.o: ../Stack/con_stack.c
 CMakeFiles/Data-Structures.dir/Stack/con_stack.c.o: ../Stack/con_stack.h
 
+CMakeFiles/Data-Structures.dir/Test/test.c.o: ../List/con_list.h
+CMakeFiles/Data-Structures.dir/Test/test.c.o: ../Map/binary_tree.h
 CMakeFiles/Data-Structures.dir/Test/test.c.o: ../Set/hashtable.h
 CMakeFiles/Data-Structures.dir/Test/test.c.o: ../Test/test.c
 

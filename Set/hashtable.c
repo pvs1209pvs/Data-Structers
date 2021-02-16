@@ -26,7 +26,7 @@ void hash_table_init(struct Hash_Table * table, const size_t cpcty) {
  */
 _Bool hash_table_insert(struct Hash_Table * table, void * const ele, size_t (hash_func)(const void * const h)){
 
-    if(table->size > 0 && table->size == table->cpcty ) {
+    if((float)table->size/table->cpcty >= 0.75) {
         hash_table_grow(table);
     }
 

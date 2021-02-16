@@ -26,7 +26,7 @@ struct Binary_Node * binary_tree_max(struct Binary_Node * tree);
 
 // struct Binary_Node * binary_tree_update_node(struct Binary_Node * tree, struct Binary_Node * trgt_node, void * new_value, int(compare_to)(const void * const x, const void * const y));
 
-// struct Binary_Node * binary_tree_contains(struct Binary_Node * tree, struct Binary_Node ele, int(compare_to)(const void * const x, const void * const y));
+struct Binary_Node * binary_tree_contains(struct Binary_Node * tree, struct Binary_Node ele, int(compare_to)(const void * const x, const void * const y));
 
 // struct List binary_tree_ele_array(struct Binary_Node * tree);
 
