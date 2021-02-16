@@ -5,8 +5,9 @@
 #include "hashtable.h"
 
 /**
- * @param table
- * @param cpcty
+ * Initialzes the hashtable. 
+ * @param table Container for the key-value pair.
+ * @param cpcty Initial capacity for the table. 
  */
 void hash_table_init(struct Hash_Table * table, const size_t cpcty) {
 
@@ -22,10 +23,12 @@ void hash_table_init(struct Hash_Table * table, const size_t cpcty) {
 
 
 /**
- * @param table
- * @param ele
- * @param hash_func
- * @return 
+ * Insert the value to the hashtable.
+ * @param table Container for the key-value pair.
+ * @param key Hashtable key.
+ * @param value Hashtable value.
+ * @param hash_func Hashing function.
+ * @return True if the value was added, else false.
  */
 _Bool hash_table_insert(struct Hash_Table * table, void * const key, void * const value, size_t (hash_func)(const void * const h)){
 
@@ -51,11 +54,12 @@ _Bool hash_table_insert(struct Hash_Table * table, void * const key, void * cons
 
 
 /**
- * @param table
- * @param ele
- * @param hash_func
- * @param compare
- * @return 
+ * Remove the value mapped with the key. 
+ * @param table Container for the key-value pair.
+ * @param key Hashtable key.
+ * @param hash_func Hashing function.
+ * @param compare Functions to compare keys. 
+ * @return Value to which the key has been mapped, NULL if it doesn't exist. 
  */
 void * hash_table_remove(struct Hash_Table * table, const void * const key, size_t (hash_func(const void * const h)), int(compare)(const void * const x, const void * const y)) {
 
@@ -78,7 +82,29 @@ void * hash_table_remove(struct Hash_Table * table, const void * const key, size
 
 
 /**
- * @param table
+ */
+_Bool hash_table_contains(struct Hash_Table * table){
+    return false;
+}
+
+
+/**
+ */
+void ** hash_table_keys(struct Hash_Table * table){
+    return NULL;
+}
+
+
+/**
+ */
+void ** hash_table_values(struct Hash_Table * table){
+    return NULL;
+}
+
+
+/**
+ * Increase the size of the hashtable.
+ * @param table Container for the key-value pair.
  */
 static void hash_table_grow(struct Hash_Table * table) {
 
@@ -98,9 +124,10 @@ static void hash_table_grow(struct Hash_Table * table) {
 
 
 /**
- * @param table
- * @param index
- * @return 
+ * Check if the index is empty. 
+ * @param table Container for the key-value pair.
+ * @param index Index to be checked for the existance of a value.
+ * @return True if no value exist at the index, else false. 
  */
 _Bool hash_table_is_blank(struct Hash_Table * table, const size_t index){
     return table->arr[index].key == NULL && table->arr[index].value == NULL;

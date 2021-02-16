@@ -22,6 +22,12 @@ _Bool hash_table_insert(struct Hash_Table * hash_table, void * const key, void *
 
 void * hash_table_remove(struct Hash_Table * hash_table, const void * const key, size_t (hash_func(const void * const h)), int(compare)(const void * const x, const void * const y));
 
+_Bool hash_table_contains(struct Hash_Table * table);
+
+void ** hash_table_keys(struct Hash_Table * table);
+
+void ** hash_table_values(struct Hash_Table * table);
+
 static void hash_table_grow(struct Hash_Table * hashTable);
 
 _Bool hash_table_is_blank(struct Hash_Table * table, const size_t index);
