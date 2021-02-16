@@ -7,7 +7,6 @@
 #include "con_list.h"
 #include "binary_tree.h"
 
-
 size_t func(const void * const a){
     return (size_t)(*(int*)a);
 }
@@ -18,38 +17,33 @@ int compare(const void * const x, const void * const y){
 
 int main(){
     
-    srand(time(0));
+    int nums[5] = {20, 40, 10, 50 ,30};
+    int cools[5] = {100, 200, 300, 400, 500};
 
-    const long N = 1000000;
+    struct Hash_Table table;
+    hash_table_init(&table, 4);
 
-    int num[N];
-    for (long i = 0; i < N; i++){
-        num[i] = rand()%10000;
+    for (size_t i = 0; i < 5; i++){
+        hash_table_insert(&table, &nums[i], &cools[i], func);
     }
 
-    struct List list;
-    con_list_init(&list, 10);
+    printf("----\n\n");
 
-    for (size_t i = 0; i < N; i++){
-        con_list_add(&list, &num[i]);
+
+    for (size_t i = 0; i < table.cpcty; i++){
+        if(hash_table_is_blank(&table, i)){
+            printf(".\n");
+        }
+        else{
+            printf("%d %d \n", *(int*)table.arr[i].key, *(int*)table.arr[i].value);
+        }
     }
 
-    printf("%d\n", con_list_cntns(&list, &num[1000000/2], compare));
-
-
-    // struct Binary_Node tree;
-    // binary_tree_init(&tree);
-
-    // for (size_t i = 0; i < N; i++){
-    //     binary_tree_add(&tree, &num[i], compare);
-    // }
-
-    // struct Binary_Node ele;
-    // binary_tree_init(&ele);
-    // ele.key = &num[1000000/2];
-    // printf("%d\n", *(int*)binary_tree_contains(&tree, ele, compare)->key);
-
+    printf("%zu %zu \n", table.size, table.cpcty);
+   
     
+
+
     
     
     return 0;
