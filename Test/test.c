@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdbool.h>
-#include<time.h>
+#include <time.h>
 #include "hashtable.h"
 #include "con_list.h"
 #include "binary_tree.h"
@@ -17,32 +17,28 @@ int compare(const void * const x, const void * const y){
 
 int main(){
     
-    int nums[5] = {20, 40, 10, 50 ,30};
-    int cools[5] = {100, 200, 300, 400, 500};
+    const int N = 8;
+    int nums[] = {100, 75, 150, 125, 175, 160, 200, 155};
+    struct Binary_Node nodes[N];
 
-    struct Hash_Table table;
-    hash_table_init(&table, 4);
-
-    for (size_t i = 0; i < 5; i++){
-        hash_table_insert(&table, &nums[i], &cools[i], func);
+    for (size_t i = 1; i < N; i++){
+        nodes[i] = *binary_tree_init_node(&nums[i]);
     }
-
-    printf("----\n\n");
-
-
-    for (size_t i = 0; i < table.cpcty; i++){
-        if(hash_table_is_blank(&table, i)){
-            printf(".\n");
-        }
-        else{
-            printf("%d %d \n", *(int*)table.arr[i].key, *(int*)table.arr[i].value);
-        }
-    }
-
-    printf("%zu %zu \n", table.size, table.cpcty);
-   
     
+    struct Binary_Node * root = binary_tree_init_node(&nums[0]);
 
+    for (size_t i = 1; i < N; i++){
+        binary_tree_add(root, &nodes[i], compare);
+    }
+
+
+    printf("%d\n", binary_tree_height(root));
+
+
+
+
+    
+   
 
     
     
