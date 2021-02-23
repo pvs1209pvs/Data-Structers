@@ -19,21 +19,19 @@ int main(){
     
     const int N = 8;
     int nums[] = {100, 75, 150, 125, 175, 160, 200, 155};
-    struct Binary_Node nodes[N];
 
-    for (size_t i = 1; i < N; i++){
-        nodes[i] = *binary_tree_init_node(&nums[i]);
+    struct Binary_Node root;
+    binary_tree_init(&root);
+
+    for (size_t i = 0; i < N; i++){
+        binary_tree_add(&root, &nums[i], compare);
     }
     
-    struct Binary_Node * root = binary_tree_init_node(&nums[0]);
+   
 
-    for (size_t i = 1; i < N; i++){
-        binary_tree_add(root, &nodes[i], compare);
-    }
+    printf("%d\n", *(int*)root.right->right->left->key);
 
-
-    printf("%d\n", binary_tree_height(root));
-
+  
 
 
 

@@ -9,15 +9,11 @@
  * @param k is the key.
  * @return the struct Binary_Node with key equal to k and value equal to v and both the children pointers equal to NULL.
  */
-struct Binary_Node * binary_tree_init_node(void * k) {
+void binary_tree_init(struct Binary_Node * tree) {
 
-    struct Binary_Node * result = malloc(sizeof(struct Binary_Node));
-    
-    result->key = k;
-    result->left = NULL;
-    result->right = NULL;
-    
-    return result;
+    tree->key = NULL;
+    tree->left = NULL;
+    tree->right = NULL;
 
 } 
 
@@ -28,24 +24,28 @@ struct Binary_Node * binary_tree_init_node(void * k) {
  * @param ele Node to be added.
  * @param compare_to Dictates how the nodes are compared.
  */
-void binary_tree_add(struct Binary_Node * tree, struct Binary_Node * ele, int(compare_to(const void * const x, const void * const y))) {
+void binary_tree_add(struct Binary_Node * tree, void * ele, int(compare_to(const void * const x, const void * const y))) {
 
-    if (tree == NULL) { // tree is empty
-        printf("Error: Root node cannot be NULL. Give it a value key-value values before adding elements to the binary tree.");
-        exit(1);
+    if (tree->key == NULL) { // tree is empty
+        tree->key = ele;
     } else {
 
-        if (compare_to(ele->key, tree->key) < 0) { // ele < tree
+        if (compare_to(ele, tree->key) < 0) { // ele < tree
             if (tree->left == NULL) {
-                tree->left = ele;
+                tree->left = malloc(sizeof(struct Binary_Node));
+                binary_tree_init(tree->left);
+                tree->left->key = ele;
+                
             } 
             else {
                 binary_tree_add(tree->left, ele, compare_to);
             }
         } 
-        else if (compare_to(ele->key, tree->key) > 0) { // ele > tree
+        else if (compare_to(ele, tree->key) > 0) { // ele > tree
             if (tree->right == NULL) {
-                tree->right = ele;
+                tree->right = malloc(sizeof(struct Binary_Node));
+                binary_tree_init(tree->right);
+                tree->right->key = ele;
             } 
             else {
                 binary_tree_add(tree->right, ele, compare_to);
