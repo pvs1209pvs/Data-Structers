@@ -17,9 +17,9 @@ void binary_tree_init(struct Binary_Node * tree);
 
 void binary_tree_add(struct Binary_Node * tree, void * ele, int(compare_to)(const void * const x, const void * const y));
 
-static struct Binary_Node * binary_tree_del_node(struct Binary_Node * tree, struct Binary_Node * ele, int(compare_to)(const void * const x, const void * const y));
+static struct Binary_Node * binary_tree_del_node(struct Binary_Node * tree, void * ele, int(compare_to)(const void * const x, const void * const y));
 
-void binary_tree_del(struct Binary_Node * tree, struct Binary_Node * ele, int(compare_to)(const void * const x, const void * const y));
+void binary_tree_del(struct Binary_Node * tree, void * ele, int(compare_to)(const void * const x, const void * const y));
 
 struct Binary_Node * binary_tree_min(struct Binary_Node * tree);
 

@@ -35,7 +35,6 @@ void binary_tree_add(struct Binary_Node * tree, void * ele, int(compare_to(const
                 tree->left = malloc(sizeof(struct Binary_Node));
                 binary_tree_init(tree->left);
                 tree->left->key = ele;
-                
             } 
             else {
                 binary_tree_add(tree->left, ele, compare_to);
@@ -65,24 +64,24 @@ void binary_tree_add(struct Binary_Node * tree, void * ele, int(compare_to(const
  * @param compare_to Dictates how the values are compared.
  * @return Modified tree.
  */
-static struct Binary_Node * binary_tree_del_node(struct Binary_Node * tree, struct Binary_Node * ele, int(compareTo)(const void * const x, const void * const y)) {
+static struct Binary_Node * binary_tree_del_node(struct Binary_Node * tree, void * ele, int(compareTo)(const void * const x, const void * const y)) {
 
-    if(tree == NULL){
+    if(tree->key == NULL){
         return NULL;
     }
 
-    if (compareTo(ele->key, tree->key) < 0) {
+    if (compareTo(ele, tree->key) < 0) {
         tree->left = binary_tree_del_node(tree->left, ele, compareTo);
     } 
-    else if (compareTo(ele->key, tree->key) > 0 ) {
+    else if (compareTo(ele, tree->key) > 0 ) {
         tree->right = binary_tree_del_node(tree->right, ele, compareTo);
     }
     else{
 
-        if (tree->left == NULL) { 
+        if (tree->left->key == NULL) { 
             return tree->right;
         } 
-        else if (tree->right == NULL) {
+        else if (tree->right->key == NULL) {
             return tree->left;
         } 
         else{
@@ -97,7 +96,7 @@ static struct Binary_Node * binary_tree_del_node(struct Binary_Node * tree, stru
 
     }
 
-    return tree;
+    return  ;
 
 } 
 
@@ -108,7 +107,7 @@ static struct Binary_Node * binary_tree_del_node(struct Binary_Node * tree, stru
  * @param ele Node to be removed.
  * @param compare_to Dictates how the values are compared.
  */
-void binary_tree_del(struct Binary_Node * tree, struct Binary_Node * ele, int(compare_to)(const void * const x, const void * const y)){
+void binary_tree_del(struct Binary_Node * tree, void * ele, int(compare_to)(const void * const x, const void * const y)){
     tree = binary_tree_del_node(tree, ele, compare_to);
 }
 

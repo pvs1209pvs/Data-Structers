@@ -27,9 +27,10 @@ int main(){
         binary_tree_add(&root, &nums[i], compare);
     }
     
+    binary_tree_del(&root, &nums[2], compare);
    
 
-    printf("%d\n", *(int*)root.right->right->left->key);
+   printf("%d\n", *(int*)root.right->key);
 
   
 
