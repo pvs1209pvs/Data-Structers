@@ -21,6 +21,3 @@ Every data structure must be initalized using _data_strucutre_implementation_ini
 ## Priority Queue
 **Tree**
 
-## Author
-Paramvir Singh (pvs1209pvs)
-
